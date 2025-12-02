@@ -107,10 +107,26 @@ export default {
               new ButtonBuilder().setCustomId('set_welcome_message').setLabel('Set Message').setStyle(ButtonStyle.Secondary)
             );
           await interaction.reply({ content: 'Configure Welcome Settings:', components: [row], ephemeral: true });
+        } else if (value === 'ticket_setup') {
+          const row = new ActionRowBuilder()
+            .addComponents(
+              new ButtonBuilder().setCustomId('send_ticket_panel').setLabel('Send Panel Here').setStyle(ButtonStyle.Success).setEmoji('📩')
+            );
+          await interaction.reply({ content: 'Click below to send the Ticket Panel to this channel:', components: [row], ephemeral: true });
+
         } else if (value === 'leveling_setup') {
-          await interaction.reply({ content: 'Leveling setup coming soon!', ephemeral: true });
-        } else {
-          await interaction.reply({ content: 'General setup coming soon!', ephemeral: true });
+          const row = new ActionRowBuilder()
+            .addComponents(
+              new ButtonBuilder().setCustomId('set_leveling_channel').setLabel('Set Leveling Channel').setStyle(ButtonStyle.Primary).setEmoji('#️⃣')
+            );
+          await interaction.reply({ content: 'Configure Leveling Settings:', components: [row], ephemeral: true });
+
+        } else if (value === 'general_setup') {
+          const row = new ActionRowBuilder()
+            .addComponents(
+              new ButtonBuilder().setCustomId('set_prefix_btn').setLabel('Set Prefix').setStyle(ButtonStyle.Secondary).setEmoji('❗')
+            );
+          await interaction.reply({ content: 'Configure General Settings:', components: [row], ephemeral: true });
         }
       }
 
@@ -253,10 +269,82 @@ export default {
         await interaction.message.edit({ components: [disabledRow] });
         return;
       }
+
+      // --- New Config Handlers ---
+      if (customId === 'send_ticket_panel') {
+        const embed = new EmbedBuilder()
+          .setColor('Blue')
+          .setTitle('🎫 Support Tickets')
+          .setDescription('Click the button below to open a support ticket.')
+          .setFooter({ text: 'Support System' });
+
+        const row = new ActionRowBuilder().addComponents(
+          new ButtonBuilder().setCustomId('create_ticket').setLabel('Create Ticket').setStyle(ButtonStyle.Primary).setEmoji('📩')
+        );
+
+        await interaction.channel.send({ embeds: [embed], components: [row] });
+        await interaction.reply({ content: '✅ Ticket panel sent!', ephemeral: true });
+        return;
+      }
+
+      if (customId === 'set_leveling_channel') {
+        const select = new ChannelSelectMenuBuilder()
+          .setCustomId('leveling_channel_select')
+          .setPlaceholder('Select leveling channel')
+          .setChannelTypes(ChannelType.GuildText);
+
+        const row = new ActionRowBuilder().addComponents(select);
+        await interaction.reply({ content: 'Select where level-up messages should go:', components: [row], ephemeral: true });
+        return;
+      }
+
+      if (customId === 'set_prefix_btn') {
+        const modal = new ModalBuilder()
+          .setCustomId('prefix_modal')
+          .setTitle('Set Server Prefix');
+
+        const input = new TextInputBuilder()
+          .setCustomId('prefix_input')
+          .setLabel("New Prefix")
+          .setStyle(TextInputStyle.Short)
+          .setPlaceholder("s?")
+          .setRequired(true)
+          .setMaxLength(5);
+
+        modal.addComponents(new ActionRowBuilder().addComponents(input));
+        await interaction.showModal(modal);
+        return;
+      }
+    }
+
+    // Handle Channel Selects
+    if (interaction.isChannelSelectMenu()) {
+      const { setGuildConfig } = await import('../utils/database.js');
+
+      if (interaction.customId === 'welcome_channel_select') {
+        const channelId = interaction.values[0];
+        setGuildConfig(interaction.guildId, 'welcome_channel', channelId);
+        await interaction.reply({ content: `✅ Welcome channel set to <#${channelId}>!`, ephemeral: true });
+        return;
+      }
+
+      if (interaction.customId === 'leveling_channel_select') {
+        const channelId = interaction.values[0];
+        setGuildConfig(interaction.guildId, 'leveling_channel', channelId);
+        await interaction.reply({ content: `✅ Leveling channel set to <#${channelId}>!`, ephemeral: true });
+        return;
+      }
     }
 
     // Handle Modals
     if (interaction.isModalSubmit()) {
+      if (interaction.customId === 'prefix_modal') {
+        const newPrefix = interaction.fields.getTextInputValue('prefix_input');
+        const { setGuildConfig } = await import('../utils/database.js');
+        setGuildConfig(interaction.guildId, 'prefix', newPrefix);
+        await interaction.reply({ content: `✅ Server prefix updated to: \`${newPrefix}\``, ephemeral: true });
+        return;
+      }
       if (interaction.customId === 'welcome_message_modal') {
         const message = interaction.fields.getTextInputValue('welcome_message_input');
         // Save to DB

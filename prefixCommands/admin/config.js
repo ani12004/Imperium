@@ -15,6 +15,11 @@ export default {
                     .setEmoji("👋")
                     .setValue("welcome_setup"),
                 new StringSelectMenuOptionBuilder()
+                    .setLabel("Ticket Setup")
+                    .setDescription("Configure support ticket panel")
+                    .setEmoji("🎫")
+                    .setValue("ticket_setup"),
+                new StringSelectMenuOptionBuilder()
                     .setLabel("Leveling Setup")
                     .setDescription("Configure leveling channel")
                     .setEmoji("🆙")
