@@ -4,9 +4,12 @@ export default {
     name: "createsupport",
     description: "Automatically sets up the support server with FULL permissions (Owner Only)",
     async execute(message, args, client) {
+        // Debug Logging
+        console.log(`[DEBUG] Owner Check: EnvVar='${process.env.OWNER_ID}' vs Author='${message.author.id}'`);
+
         // 1. Owner Check
         if (message.author.id !== process.env.OWNER_ID) {
-            return message.reply("❌ This command is restricted to the bot owner.");
+            return message.reply(`❌ Restricted to owner. (Debug: Your ID: ${message.author.id}, Config ID: ${process.env.OWNER_ID || 'Not Set'})`);
         }
 
         const guild = message.guild;
