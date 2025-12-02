@@ -203,22 +203,13 @@ export default {
       }
 
       if (customId === 'create_embed_button') {
-        const modal = new ModalBuilder()
-          .setCustomId('embed_modal')
-          .setTitle('Create Aesthetic Embed');
+        const select = new ChannelSelectMenuBuilder()
+          .setCustomId('embed_channel_select')
+          .setPlaceholder('Select where to send the embed')
+          .setChannelTypes(ChannelType.GuildText);
 
-        const titleInput = new TextInputBuilder().setCustomId('embed_title').setLabel("Title").setStyle(TextInputStyle.Short).setRequired(false);
-        const descInput = new TextInputBuilder().setCustomId('embed_desc').setLabel("Description").setStyle(TextInputStyle.Paragraph).setRequired(true);
-        const colorInput = new TextInputBuilder().setCustomId('embed_color').setLabel("Color (Hex)").setStyle(TextInputStyle.Short).setPlaceholder("#FFB6C1").setRequired(false);
-        const footerInput = new TextInputBuilder().setCustomId('embed_footer').setLabel("Footer").setStyle(TextInputStyle.Short).setRequired(false);
-
-        modal.addComponents(
-          new ActionRowBuilder().addComponents(titleInput),
-          new ActionRowBuilder().addComponents(descInput),
-          new ActionRowBuilder().addComponents(colorInput),
-          new ActionRowBuilder().addComponents(footerInput)
-        );
-        await interaction.showModal(modal);
+        const row = new ActionRowBuilder().addComponents(select);
+        await interaction.reply({ content: 'First, choose the channel:', components: [row], ephemeral: true });
         return;
       }
 
@@ -329,9 +320,37 @@ export default {
       }
 
       if (interaction.customId === 'leveling_channel_select') {
+        try {
+          const channelId = interaction.values[0];
+          setGuildConfig(interaction.guildId, 'level_channel', channelId);
+          await interaction.reply({ content: `✅ Leveling channel set to <#${channelId}>!`, ephemeral: true });
+        } catch (error) {
+          console.error("Leveling setup error:", error);
+          await interaction.reply({ content: `❌ Failed to set channel: ${error.message}`, ephemeral: true });
+        }
+        return;
+      }
+
+      if (interaction.customId === 'embed_channel_select') {
         const channelId = interaction.values[0];
-        setGuildConfig(interaction.guildId, 'leveling_channel', channelId);
-        await interaction.reply({ content: `✅ Leveling channel set to <#${channelId}>!`, ephemeral: true });
+
+        // Show the modal now, passing channelId in the customId
+        const modal = new ModalBuilder()
+          .setCustomId(`embed_modal_${channelId}`)
+          .setTitle('Create Aesthetic Embed');
+
+        const titleInput = new TextInputBuilder().setCustomId('embed_title').setLabel("Title").setStyle(TextInputStyle.Short).setRequired(false);
+        const descInput = new TextInputBuilder().setCustomId('embed_desc').setLabel("Description").setStyle(TextInputStyle.Paragraph).setRequired(true);
+        const colorInput = new TextInputBuilder().setCustomId('embed_color').setLabel("Color (Hex)").setStyle(TextInputStyle.Short).setPlaceholder("#FFB6C1").setRequired(false);
+        const footerInput = new TextInputBuilder().setCustomId('embed_footer').setLabel("Footer").setStyle(TextInputStyle.Short).setRequired(false);
+
+        modal.addComponents(
+          new ActionRowBuilder().addComponents(titleInput),
+          new ActionRowBuilder().addComponents(descInput),
+          new ActionRowBuilder().addComponents(colorInput),
+          new ActionRowBuilder().addComponents(footerInput)
+        );
+        await interaction.showModal(modal);
         return;
       }
     }
@@ -353,7 +372,10 @@ export default {
         await interaction.reply({ content: '✅ Welcome message updated!', ephemeral: true });
       }
 
-      if (interaction.customId === 'embed_modal') {
+      if (interaction.customId.startsWith('embed_modal')) {
+        // Extract channel ID from customId "embed_modal_CHANNELID"
+        const channelId = interaction.customId.split('_')[2];
+
         const title = interaction.fields.getTextInputValue('embed_title');
         const description = interaction.fields.getTextInputValue('embed_desc');
         const color = interaction.fields.getTextInputValue('embed_color') || '#FFB6C1';
@@ -366,7 +388,13 @@ export default {
         if (title) embed.setTitle(title);
         if (footer) embed.setFooter({ text: footer });
 
-        await interaction.reply({ embeds: [embed] });
+        const channel = interaction.guild.channels.cache.get(channelId);
+        if (channel) {
+          await channel.send({ embeds: [embed] });
+          await interaction.reply({ content: `✅ Embed sent to ${channel}!`, ephemeral: true });
+        } else {
+          await interaction.reply({ content: `❌ Could not find channel.`, ephemeral: true });
+        }
       }
 
       if (interaction.customId === 'economy_modal') {
