@@ -17,10 +17,12 @@
     <div class="background-glow"></div>
 
     <nav class="glass-nav">
-        <div class="logo">Universal<span class="dot">.</span></div>
+        <div class="logo"><a href="/" style="text-decoration:none; color:inherit;">Universal<span
+                    class="dot">.</span></a></div>
         <ul class="nav-links">
-            <li><a href="/">Home</a></li>
+            <li><a href="/#features">Features</a></li>
             <li><a href="/commands" class="active">Commands</a></li>
+            <li><a href="/#stats">Stats</a></li>
             <li><a href="https://discord.gg/yourserver" class="nav-btn">Support</a></li>
         </ul>
     </nav>
@@ -29,52 +31,107 @@
         <div class="header-content">
             <h1 class="fade-in-up">Bot <span class="gradient-text">Commands</span></h1>
             <p class="fade-in-up delay-1">Explore the full capabilities of Discord Bot Universal.</p>
+
+            <div class="search-container fade-in-up delay-2">
+                <input type="text" id="searchInput" class="search-input"
+                    placeholder="Search commands (e.g., 'ban', 'money')...">
+            </div>
+
+            <div class="category-filters fade-in-up delay-2">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="economy">Economy</button>
+                <button class="filter-btn" data-filter="social">Social</button>
+                <button class="filter-btn" data-filter="moderation">Moderation</button>
+                <button class="filter-btn" data-filter="tickets">Tickets</button>
+                <button class="filter-btn" data-filter="utility">Utility</button>
+                <button class="filter-btn" data-filter="fun">Fun</button>
+                <button class="filter-btn" data-filter="leveling">Leveling</button>
+            </div>
         </div>
     </header>
 
     <main class="commands-container">
 
-        <!-- Utility Section -->
-        <section class="command-category fade-in-up delay-2">
-            <h2 class="category-title"><i class="fas fa-tools"></i> Utility</h2>
+        <!-- Economy Section -->
+        <section class="command-category" id="economy">
+            <h2 class="category-title"><i class="fas fa-coins"></i> Economy</h2>
             <div class="command-grid">
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?help</div>
-                    <div class="cmd-desc">Show the help menu.</div>
+                    <div class="cmd-name">s?balance</div>
+                    <div class="cmd-desc">Check your wallet and bank balance.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?poll &lt;question&gt;</div>
-                    <div class="cmd-desc">Create a simple yes/no poll.</div>
+                    <div class="cmd-name">s?deposit &lt;amount&gt;</div>
+                    <div class="cmd-desc">Deposit money into your bank.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?invite</div>
-                    <div class="cmd-desc">Get the bot's invite link.</div>
+                    <div class="cmd-name">s?withdraw &lt;amount&gt;</div>
+                    <div class="cmd-desc">Withdraw money from your bank.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?ping</div>
-                    <div class="cmd-desc">Check bot latency.</div>
+                    <div class="cmd-name">s?pay &lt;user&gt; &lt;amount&gt;</div>
+                    <div class="cmd-desc">Transfer money to another user.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?serverinfo</div>
-                    <div class="cmd-desc">View server information.</div>
+                    <div class="cmd-name">s?work</div>
+                    <div class="cmd-desc">Work to earn money.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?userinfo &lt;user&gt;</div>
-                    <div class="cmd-desc">View user information.</div>
+                    <div class="cmd-name">s?daily</div>
+                    <div class="cmd-desc">Claim your daily reward.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?avatar &lt;user&gt;</div>
-                    <div class="cmd-desc">View a user's avatar.</div>
+                    <div class="cmd-name">s?rob &lt;user&gt;</div>
+                    <div class="cmd-desc">Attempt to rob a user.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social & OwO Section -->
+        <section class="command-category" id="social">
+            <h2 class="category-title"><i class="fas fa-heart"></i> Social & OwO</h2>
+            <div class="command-grid">
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?profile</div>
+                    <div class="cmd-desc">View your profile, partner, and family.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?botinfo</div>
-                    <div class="cmd-desc">View bot statistics.</div>
+                    <div class="cmd-name">s?setbio &lt;text&gt;</div>
+                    <div class="cmd-desc">Set your profile biography.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?marry &lt;user&gt;</div>
+                    <div class="cmd-desc">Propose to a user.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?divorce</div>
+                    <div class="cmd-desc">Divorce your partner.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?family</div>
+                    <div class="cmd-desc">View your family tree.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?quote &lt;text&gt;</div>
+                    <div class="cmd-desc">Generate a quote image.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?hug / kiss / slap</div>
+                    <div class="cmd-desc">Interact with other users (GIFs).</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?hunt</div>
+                    <div class="cmd-desc">Hunt for animals.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?zoo</div>
+                    <div class="cmd-desc">View your animal collection.</div>
                 </div>
             </div>
         </section>
 
         <!-- Moderation Section -->
-        <section class="command-category fade-in-up delay-3">
+        <section class="command-category" id="moderation">
             <h2 class="category-title"><i class="fas fa-shield-alt"></i> Moderation</h2>
             <div class="command-grid">
                 <div class="command-card glass-card">
@@ -90,61 +147,83 @@
                     <div class="cmd-desc">Timeout a member.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?unban &lt;id&gt;</div>
-                    <div class="cmd-desc">Unban a user by ID.</div>
-                </div>
-                <div class="command-card glass-card">
-                    <div class="cmd-name">s?purge &lt;amount&gt;</div>
-                    <div class="cmd-desc">Delete a bulk amount of messages.</div>
+                    <div class="cmd-name">s?warn &lt;user&gt;</div>
+                    <div class="cmd-desc">Warn a user.</div>
                 </div>
                 <div class="command-card glass-card">
                     <div class="cmd-name">s?nuke</div>
                     <div class="cmd-desc">Delete and recreate the channel.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?lock</div>
-                    <div class="cmd-desc">Lock the current channel.</div>
+                    <div class="cmd-name">s?lock / unlock</div>
+                    <div class="cmd-desc">Lock or unlock the channel.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tickets Section -->
+        <section class="command-category" id="tickets">
+            <h2 class="category-title"><i class="fas fa-ticket-alt"></i> Tickets</h2>
+            <div class="command-grid">
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?tsetup</div>
+                    <div class="cmd-desc">Setup the ticket panel.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?unlock</div>
-                    <div class="cmd-desc">Unlock the current channel.</div>
+                    <div class="cmd-name">s?tclose</div>
+                    <div class="cmd-desc">Close the current ticket.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?tadd &lt;user&gt;</div>
+                    <div class="cmd-desc">Add a user to the ticket.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utility Section -->
+        <section class="command-category" id="utility">
+            <h2 class="category-title"><i class="fas fa-tools"></i> Utility</h2>
+            <div class="command-grid">
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?help</div>
+                    <div class="cmd-desc">Show the help menu.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?poll &lt;question&gt;</div>
+                    <div class="cmd-desc">Create a simple yes/no poll.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?userinfo &lt;user&gt;</div>
+                    <div class="cmd-desc">View user information.</div>
+                </div>
+                <div class="command-card glass-card">
+                    <div class="cmd-name">s?serverinfo</div>
+                    <div class="cmd-desc">View server information.</div>
                 </div>
             </div>
         </section>
 
         <!-- Fun Section -->
-        <section class="command-category fade-in-up delay-3">
+        <section class="command-category" id="fun">
             <h2 class="category-title"><i class="fas fa-laugh-beam"></i> Fun</h2>
             <div class="command-grid">
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?joke</div>
-                    <div class="cmd-desc">Get a random joke.</div>
-                </div>
-                <div class="command-card glass-card">
-                    <div class="cmd-name">s?fact</div>
-                    <div class="cmd-desc">Get a random useless fact.</div>
-                </div>
-                <div class="command-card glass-card">
-                    <div class="cmd-name">s?meme</div>
-                    <div class="cmd-desc">Get a random meme.</div>
+                    <div class="cmd-name">s?joke / meme</div>
+                    <div class="cmd-desc">Get a random joke or meme.</div>
                 </div>
                 <div class="command-card glass-card">
                     <div class="cmd-name">s?rps</div>
                     <div class="cmd-desc">Play Rock, Paper, Scissors.</div>
                 </div>
                 <div class="command-card glass-card">
-                    <div class="cmd-name">s?cat</div>
-                    <div class="cmd-desc">Get a random cat picture.</div>
-                </div>
-                <div class="command-card glass-card">
-                    <div class="cmd-name">s?dog</div>
-                    <div class="cmd-desc">Get a random dog picture.</div>
+                    <div class="cmd-name">s?cat / dog</div>
+                    <div class="cmd-desc">Get a random animal picture.</div>
                 </div>
             </div>
         </section>
 
         <!-- Leveling Section -->
-        <section class="command-category fade-in-up delay-3">
+        <section class="command-category" id="leveling">
             <h2 class="category-title"><i class="fas fa-chart-line"></i> Leveling</h2>
             <div class="command-grid">
                 <div class="command-card glass-card">

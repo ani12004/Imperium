@@ -1,0 +1,124 @@
+# Discord Bot Universal - Official Wiki 📚
+
+## 🏠 Home
+
+**Welcome to Discord Bot Universal!** 🚀
+
+**Discord Bot Universal** is a powerful, multi-purpose Discord bot designed to manage your server with style and efficiency. It features a robust economy system, social profiles, advanced moderation, and much more.
+
+### 🌟 Key Features
+*   **💰 Global Economy:** Banking, work, robbery, and shop systems.
+*   **❤️ Social & OwO:** Profiles, marriage, family trees, and anime interactions.
+*   **🛡️ Moderation:** Ban, kick, timeout, nuke, and auto-mod.
+*   **🎫 Ticket System:** Professional button-based support tickets.
+*   **📈 Leveling:** XP system with custom rank cards.
+*   **🎨 Web Dashboard:** View commands and stats online.
+
+---
+
+## 📥 Installation Guide 🛠️
+
+Follow these steps to self-host Discord Bot Universal on your own machine or VPS.
+
+### Prerequisites
+*   [Node.js v16.9.0 or higher](https://nodejs.org/)
+*   [Git](https://git-scm.com/)
+*   A Discord Bot Token ([Get it here](https://discord.com/developers/applications))
+
+### Setup
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/yourusername/discord-bot-universal.git
+    cd discord-bot-universal
+    ```
+
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Environment:**
+    *   Rename `.env.example` to `.env`.
+    *   Fill in your details:
+        ```env
+        TOKEN=your_bot_token
+        CLIENT_ID=your_client_id
+        MONGO_URI=your_mongodb_connection_string (if applicable)
+        ```
+
+4.  **Start the Bot:**
+    ```bash
+    npm start
+    ```
+
+---
+
+## 📜 Command List
+
+*Prefix:* `s?` (Default)
+
+### 💰 Economy
+| Command | Description |
+| :--- | :--- |
+| `s?balance` | Check your wallet and bank balance. |
+| `s?deposit <amount>` | Deposit money into your bank. |
+| `s?withdraw <amount>` | Withdraw money from your bank. |
+| `s?pay <user> <amount>` | Transfer money to another user. |
+| `s?work` | Work to earn money. |
+| `s?rob <user>` | Attempt to rob a user. |
+
+### ❤️ Social
+| Command | Description |
+| :--- | :--- |
+| `s?profile` | View your profile card. |
+| `s?setbio <text>` | Set your profile biography. |
+| `s?marry <user>` | Propose to a user. |
+| `s?family` | View your family tree. |
+| `s?quote <text>` | Generate a fake quote image. |
+
+### 🛡️ Moderation
+| Command | Description |
+| :--- | :--- |
+| `s?ban <user>` | Ban a user. |
+| `s?kick <user>` | Kick a user. |
+| `s?timeout <user>` | Timeout a user. |
+| `s?nuke` | Delete and recreate the channel. |
+
+---
+
+## ⚙️ Configuration
+
+You can customize the bot's behavior by editing `config.json` or using in-bot commands.
+
+### Config File (`config.json`)
+```json
+{
+  "prefix": "s?",
+  "ownerId": "YOUR_ID",
+  "embedColor": "#5865F2"
+}
+```
+
+### In-Bot Setup
+*   **Set Welcome Channel:** `s?setup welcome #channel`
+*   **Set Ticket Panel:** `s?tsetup` (Run in the desired channel)
+
+---
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**1. Bot is online but not responding?**
+*   Check if the bot has the `Administrator` permission.
+*   Ensure you are using the correct prefix (`s?`).
+*   Check the console for errors.
+
+**2. "Missing Permissions" Error?**
+*   The bot's role must be **higher** than the user/role it is trying to manage in the Server Settings > Roles list.
+
+**3. Database Errors?**
+*   Delete `data/bot.sqlite` (Warning: Resets data) to regenerate the database if it's corrupted.
+
+**Need more help?**
+Join our [Support Server](https://discord.gg/yourserver).

@@ -67,3 +67,62 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Search and Filter Functionality
+const searchInput = document.getElementById('searchInput');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const commandCards = document.querySelectorAll('.command-card');
+const categories = document.querySelectorAll('.command-category');
+
+// Filter by Category
+if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            categories.forEach(category => {
+                if (filter === 'all' || category.id === filter) {
+                    category.classList.remove('hidden');
+                } else {
+                    category.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+// Search Commands
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+
+        categories.forEach(category => {
+            let hasVisibleCommands = false;
+            const cards = category.querySelectorAll('.command-card');
+
+            cards.forEach(card => {
+                const name = card.querySelector('.cmd-name').innerText.toLowerCase();
+                const desc = card.querySelector('.cmd-desc').innerText.toLowerCase();
+
+                if (name.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.classList.remove('hidden');
+                    hasVisibleCommands = true;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Hide category if no commands match
+            if (hasVisibleCommands) {
+                category.classList.remove('hidden');
+            } else {
+                category.classList.add('hidden');
+            }
+        });
+    });
+}
