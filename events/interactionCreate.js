@@ -1,4 +1,4 @@
-import { Events, ChannelType, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle } from 'discord.js';
+import { Events, ChannelType, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, ChannelSelectMenuBuilder } from 'discord.js';
 import db from '../utils/database.js';
 
 export default {
@@ -116,6 +116,17 @@ export default {
       return;
     }
 
+    if (interaction.isChannelSelectMenu()) {
+      if (interaction.customId === 'welcome_channel_select') {
+        const channelId = interaction.values[0];
+        // Save to DB
+        const { setGuildConfig } = await import('../utils/database.js');
+        setGuildConfig(interaction.guildId, 'welcome_channel', channelId);
+        await interaction.reply({ content: `✅ Welcome channel set to <#${channelId}>!`, ephemeral: true });
+      }
+      return;
+    }
+
     // Handle Buttons (Config & Say)
     if (interaction.isButton()) {
       const { customId } = interaction;
@@ -155,6 +166,18 @@ export default {
           new ActionRowBuilder().addComponents(footerInput)
         );
         await interaction.showModal(modal);
+        return;
+      }
+
+      if (customId === 'set_welcome_channel') {
+        const select = new ChannelSelectMenuBuilder()
+          .setCustomId('welcome_channel_select')
+          .setPlaceholder('Select a channel')
+          .setChannelTypes(ChannelType.GuildText);
+
+        const row = new ActionRowBuilder().addComponents(select);
+
+        await interaction.reply({ content: 'Select the channel for welcome messages:', components: [row], ephemeral: true });
         return;
       }
     }
