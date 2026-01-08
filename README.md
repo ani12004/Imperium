@@ -144,6 +144,6 @@ The default prefix is `,`. You can change it using `,setprefix`.
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
-**© 2025 ANIL SUTHAR. All Rights Reserved.**
+**© 2025 BLEEDX. All Rights Reserved.**
 
 This project is proprietary and confidential. Unauthorized copying, distribution, modification, or use of this file, via any medium, is strictly prohibited without the express written permission of the owner.
