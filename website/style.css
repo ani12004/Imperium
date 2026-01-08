@@ -190,6 +190,11 @@ h6 {
     letter-spacing: -0.02em;
 }
 
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
 .logo span {
     color: var(--accent-secondary);
 }

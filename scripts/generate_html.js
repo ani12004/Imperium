@@ -167,7 +167,7 @@ const templateStart = `<!DOCTYPE html>
     <nav class="navbar">
         <div class="container nav-content">
             <a href="index.html" class="logo">
-                <i class="fas fa-robot text-accent"></i>
+                <img src="imperium_logo.png" alt="Imperium Logo" class="logo-img">
                 Imperium
             </a>
             <div class="nav-links">
