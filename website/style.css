@@ -607,6 +607,40 @@ h6 {
     font-size: 0.875rem;
 }
 
+/* Mobile Optimizations */
+.pricing-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+}
+
+.commands-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Status Check Card */
+.status-check-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    transition: all var(--transition-normal);
+}
+
 /* Responsive */
 @media (max-width: 960px) {
     :root {
@@ -646,8 +680,49 @@ h6 {
         flex-direction: column;
     }
 
+    .pricing-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cmd-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .cmd-search-wrapper {
+        max-width: 100%;
+    }
+
     .btn {
         width: 100%;
+    }
+
+    /* Mobile Improvements */
+    .status-check-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .status-check-card>div {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+        margin-bottom: 16px;
     }
 }
 

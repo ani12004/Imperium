@@ -1,4 +1,6 @@
-# BleedX
+![Imperium Banner](./imperium_banner.png)
+
+# Imperium
 
 A complete, multi-purpose Discord bot built with **Discord.js v14**. This bot features a robust command handler, universal economy system, social features, moderation tools, leveling, tickets, and more.
 

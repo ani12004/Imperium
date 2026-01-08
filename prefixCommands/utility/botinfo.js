@@ -26,7 +26,7 @@ export default {
                 { name: "Memory Usage", value: `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, inline: true },
                 { name: "Support Server", value: "[Join Here](https://discord.gg/tN5MvnTTXK)", inline: true }
             )
-            .setFooter({ text: "BleedX" });
+            .setFooter({ text: "Imperium" });
 
         message.channel.send({ embeds: [embed] });
     },

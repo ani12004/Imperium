@@ -157,7 +157,7 @@ const templateStart = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commands - BleedX</title>
+    <title>Commands - Imperium</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -168,7 +168,7 @@ const templateStart = `<!DOCTYPE html>
         <div class="container nav-content">
             <a href="index.html" class="logo">
                 <i class="fas fa-robot text-accent"></i>
-                Bleed<span>X</span>
+                Imperium
             </a>
             <div class="nav-links">
                 <a href="index.html#features" class="nav-link">Features</a>
@@ -238,7 +238,7 @@ const templateEnd = `
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2025 BleedX. All rights reserved.</p>
+                <p>&copy; 2025 Imperium. All rights reserved.</p>
             </div>
         </div>
     </footer>

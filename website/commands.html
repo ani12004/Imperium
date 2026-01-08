@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commands - BleedX</title>
+    <title>Commands - Imperium</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,28 +13,24 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="/" class="logo">
+            <a href="index.html" class="logo">
                 <i class="fas fa-robot text-accent"></i>
-                Bleed<span>X</span>
+                Imperium
             </a>
             <div class="nav-links">
-                <a href="/#features" class="nav-link">Features</a>
-                <a href="/commands" class="nav-link active">Commands</a>
-                <a href="/premium" class="nav-link">Premium</a>
-                <a href="/support" class="nav-link">Support</a>
-                <a href="/about" class="nav-link">About</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="commands.html" class="nav-link" style="color: white;">Commands</a>
+                <a href="index.html#premium" class="nav-link">Premium</a>
+                <a href="index.html#support" class="nav-link">Support</a>
             </div>
-            <a href="https://discord.com/oauth2/authorize?client_id=1447868811045900299&permissions=8&integration_type=0&scope=bot"
-                class="btn btn-primary" target="_blank">
-                Add to Discord
-            </a>
+            <a href="#" class="btn btn-primary">Add to Discord</a>
         </div>
     </nav>
 
     <!-- Content -->
-    <section class="section">
+    <section class="section" style="padding-top: 120px;">
         <div class="container">
-
+            
             <!-- Header -->
             <div class="cmd-page-header">
                 <div class="cmd-page-title">
@@ -43,9 +39,8 @@
                 <div class="cmd-search-wrapper">
                     <div class="cmd-search-label">search</div>
                     <div class="cmd-search-container-ref">
-                        <input type="text" id="searchInput" class="cmd-search-input-ref"
-                            placeholder="Search commands...">
-                        <i class="fas fa-search cmd-search-icon-ref"></i>
+                         <input type="text" class="cmd-search-input-ref" placeholder="Search commands...">
+                         <i class="fas fa-search cmd-search-icon-ref"></i>
                     </div>
                 </div>
             </div>
@@ -54,7 +49,7 @@
             <div class="cmd-category-nav">
                 <button class="cmd-cat-pill active" data-cat="all">
                     <i class="fas fa-layer-group"></i> All
-                    <span class="cmd-cat-count">104</span>
+                    <span class="cmd-cat-count">97</span>
                 </button>
                 <button class="cmd-cat-pill" data-cat="moderation">
                     <i class="fas fa-gavel"></i> Moderation
@@ -79,1769 +74,1753 @@
             </div>
 
             <!-- Commands Grid -->
-            <div class="commands-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,cuddle</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',cuddle')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Cuddle someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,hug</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',hug')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Hug someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,kill</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',kill')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Kill someone (RP)!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,kiss</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',kiss')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Kiss someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,pat</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',pat')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Pat someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,poke</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',poke')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Poke someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="actions">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,slap</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',slap')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Slap someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="admin">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,config</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',config')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure server settings (Welcome, Leveling, etc.)</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="admin">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,eco</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',eco')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Manage user currency (Owner Only).</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="admin">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,setprefix</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setprefix')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Changes the bot prefix.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="admin">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,setup</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setup')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Interactive server setup.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="config">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,alias</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',alias')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Manage custom command aliases.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="config">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,automod</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',automod')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure auto-moderation.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="config">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,boost</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',boost')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure boost system.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="config">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,goodbye</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',goodbye')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure goodbye system.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="config">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,prefix</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',prefix')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Set custom prefix.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="config">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,welcome</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',welcome')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure welcome system.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,balance</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',balance')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Check your balance.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,daily</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',daily')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Claim your daily reward.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,deposit</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',deposit')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Deposit money into your bank.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,hunt</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',hunt')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Hunt for animals.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,leaderboard</div>
-                        <i class="far fa-copy cmd-copy-icon"
-                            onclick="navigator.clipboard.writeText(',leaderboard')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Shows the richest users.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,pay</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',pay')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Pay money to another user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,sell</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',sell')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Sell animals from your zoo.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,slots</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',slots')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Play slots to win money.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,withdraw</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',withdraw')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Withdraw money from your bank.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,work</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',work')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Work to earn money.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="economy">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,zoo</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',zoo')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Check your animal inventory.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="emotes">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,cry</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',cry')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Cry!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="emotes">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,dance</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',dance')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Dance!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,8ball</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',8ball')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Ask the magic 8ball a question.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,coinflip</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',coinflip')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Flip a coin and bet money.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,dice</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',dice')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Roll a die.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,fact</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',fact')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get a random useless fact.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,joke</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',joke')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get a random joke.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,meme</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',meme')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get a random meme.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="fun">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,rps</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',rps')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Play Rock Paper Scissors.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="giveaway">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,gstart</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',gstart')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Starts a giveaway.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageEvents</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="image">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,banner</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',banner')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Displays a user</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="image">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,cat</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',cat')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get a random cat image.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="image">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,dog</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',dog')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get a random dog image.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="leveling">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,leaderboard</div>
-                        <i class="far fa-copy cmd-copy-icon"
-                            onclick="navigator.clipboard.writeText(',leaderboard')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Check the server leaderboard.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="leveling">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,level</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',level')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Check your level and XP.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="leveling">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,levels</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',levels')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Shows the top ranked users.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="leveling">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,rank</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',rank')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Check your rank (alias for level).</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,ban</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',ban')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Bans a user from the server.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">BanMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,bind</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',bind')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Bind a role as staff.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,fakepermissions</div>
-                        <i class="far fa-copy cmd-copy-icon"
-                            onclick="navigator.clipboard.writeText(',fakepermissions')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Manage fake permissions for roles.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,hardban</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',hardban')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Bans a user and deletes all messages.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">BanMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,invoke</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',invoke')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Customize command messages.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,jail</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',jail')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Jails a user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageRoles</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,kick</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',kick')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Kicks a user from the server.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">KickMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,lock</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',lock')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Locks the current channel.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageChannels</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,log</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',log')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure logging channels.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageGuild</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,nuke</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',nuke')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Nukes the channel (clones and deletes).</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageChannels</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,purge</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',purge')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Deletes messages.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageMessages</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,setup</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setup')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Interactive setup for bot configuration.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,setupmute</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setupmute')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Sets up the Muted role.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,softban</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',softban')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Bans and immediately unbans a user to clear messages.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">BanMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,tempban</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',tempban')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Temporarily bans a user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">BanMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,timeout</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',timeout')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Timeouts a user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill highlight">ModerateMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,unban</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',unban')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Unbans a user from the server.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">PermissionFlagsBits.BanMembers</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,unlock</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',unlock')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Unlocks the current channel.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageChannels</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,warn</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',warn')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Warns a user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageMessages</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,warnings</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',warnings')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Check warnings of a user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">ManageMessages</span>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-                <div class="cmd-card-ref" data-category="owner">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,createsupport</div>
-                        <i class="far fa-copy cmd-copy-icon"
-                            onclick="navigator.clipboard.writeText(',createsupport')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Automatically sets up the support server with FULL permissions (Owner
-                        Only)</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">PermissionFlagsBits.Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="roles">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,reactionrole</div>
-                        <i class="far fa-copy cmd-copy-icon"
-                            onclick="navigator.clipboard.writeText(',reactionrole')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Manage reaction roles.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,adopt</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',adopt')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Adopt a child!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,disown</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',disown')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Disown a child.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,divorce</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',divorce')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Divorce your partner.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,family</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',family')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Manage your family.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,marriage</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',marriage')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Marry another user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,marry</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',marry')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Propose to someone!</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,profile</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',profile')"></i>
-                    </div>
-                    <div class="cmd-card-desc">View your social profile.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,roleplay</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',roleplay')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Roleplay actions.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,setbio</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setbio')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Set your profile bio.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,spotify</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',spotify')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Spotify integration.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="social">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,twitter</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',twitter')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Twitter integration.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="tickets">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,tsetup</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',tsetup')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Sets up the ticket system.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,avatar</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',avatar')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Displays a user</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,botinfo</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',botinfo')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Displays information about the bot.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,games</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',games')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Play mini-games.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,google</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',google')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Search Google.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,help</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',help')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Displays a list of available commands.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,invite</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',invite')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get the bot</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">PermissionFlagsBits.Administrator, // Requesting admin for
-                            simplicity, or specify needed perms</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,ping</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',ping')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Checks the bot</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,poll</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',poll')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Creates a simple yes/no poll.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,quote</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',quote')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Generate a quote image.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,review</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',review')"></i>
-                    </div>
-                    <div class="cmd-card-desc">No description provided.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,say</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',say')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Send a message or create an embed.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,serverinfo</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',serverinfo')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Displays information about the server.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,support</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',support')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Get the link to the support server.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,tts</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',tts')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Text to Speech.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="utility">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,userinfo</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',userinfo')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Displays information about a user.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="voicemaster">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">,voicemaster</div>
-                        <i class="far fa-copy cmd-copy-icon"
-                            onclick="navigator.clipboard.writeText(',voicemaster')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Manage temporary voice channels.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">none</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill none">Everyone</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">/antinuke</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText('/antinuke')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure anti-nuke protection system.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill highlight">Slash Options</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
-                <div class="cmd-card-ref" data-category="moderation">
-                    <div class="cmd-card-header">
-                        <div class="cmd-card-title">/antiraid</div>
-                        <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText('/antiraid')"></i>
-                    </div>
-                    <div class="cmd-card-desc">Configure anti-raid protection system.</div>
-
-                    <div class="cmd-section-label">Arguments</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill highlight">Slash Options</span>
-                    </div>
-
-                    <div class="cmd-section-label">Permissions</div>
-                    <div class="cmd-section-value">
-                        <span class="cmd-pill admin">Administrator</span>
-                    </div>
-                </div>
-
+            <div class="commands-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,cuddle</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',cuddle')"></i>
+            </div>
+            <div class="cmd-card-desc">Cuddle someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,hug</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',hug')"></i>
+            </div>
+            <div class="cmd-card-desc">Hug someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,kill</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',kill')"></i>
+            </div>
+            <div class="cmd-card-desc">Kill someone (RP)!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,kiss</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',kiss')"></i>
+            </div>
+            <div class="cmd-card-desc">Kiss someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,pat</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',pat')"></i>
+            </div>
+            <div class="cmd-card-desc">Pat someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,poke</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',poke')"></i>
+            </div>
+            <div class="cmd-card-desc">Poke someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="actions">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,slap</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',slap')"></i>
+            </div>
+            <div class="cmd-card-desc">Slap someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="admin">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,config</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',config')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure server settings (Welcome, Leveling, etc.)</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="admin">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,eco</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',eco')"></i>
+            </div>
+            <div class="cmd-card-desc">Manage user currency (Owner Only).</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="admin">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,setprefix</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setprefix')"></i>
+            </div>
+            <div class="cmd-card-desc">Changes the bot prefix.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="admin">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,setup</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setup')"></i>
+            </div>
+            <div class="cmd-card-desc">Interactive server setup.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="config">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,alias</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',alias')"></i>
+            </div>
+            <div class="cmd-card-desc">Manage custom command aliases.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="config">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,automod</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',automod')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure auto-moderation.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="config">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,boost</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',boost')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure boost system.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="config">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,goodbye</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',goodbye')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure goodbye system.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="config">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,prefix</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',prefix')"></i>
+            </div>
+            <div class="cmd-card-desc">Set custom prefix.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="config">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,welcome</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',welcome')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure welcome system.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,balance</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',balance')"></i>
+            </div>
+            <div class="cmd-card-desc">Check your balance.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,daily</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',daily')"></i>
+            </div>
+            <div class="cmd-card-desc">Claim your daily reward.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,deposit</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',deposit')"></i>
+            </div>
+            <div class="cmd-card-desc">Deposit money into your bank.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,hunt</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',hunt')"></i>
+            </div>
+            <div class="cmd-card-desc">Hunt for animals.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,leaderboard</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',leaderboard')"></i>
+            </div>
+            <div class="cmd-card-desc">Shows the richest users.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,pay</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',pay')"></i>
+            </div>
+            <div class="cmd-card-desc">Pay money to another user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,sell</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',sell')"></i>
+            </div>
+            <div class="cmd-card-desc">Sell animals from your zoo.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,slots</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',slots')"></i>
+            </div>
+            <div class="cmd-card-desc">Play slots to win money.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,withdraw</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',withdraw')"></i>
+            </div>
+            <div class="cmd-card-desc">Withdraw money from your bank.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,work</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',work')"></i>
+            </div>
+            <div class="cmd-card-desc">Work to earn money.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="economy">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,zoo</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',zoo')"></i>
+            </div>
+            <div class="cmd-card-desc">Check your animal inventory.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="emotes">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,cry</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',cry')"></i>
+            </div>
+            <div class="cmd-card-desc">Cry!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="emotes">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,dance</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',dance')"></i>
+            </div>
+            <div class="cmd-card-desc">Dance!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,8ball</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',8ball')"></i>
+            </div>
+            <div class="cmd-card-desc">Ask the magic 8ball a question.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,coinflip</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',coinflip')"></i>
+            </div>
+            <div class="cmd-card-desc">Flip a coin and bet money.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,dice</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',dice')"></i>
+            </div>
+            <div class="cmd-card-desc">Roll a die.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,fact</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',fact')"></i>
+            </div>
+            <div class="cmd-card-desc">Get a random useless fact.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,joke</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',joke')"></i>
+            </div>
+            <div class="cmd-card-desc">Get a random joke.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,meme</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',meme')"></i>
+            </div>
+            <div class="cmd-card-desc">Get a random meme.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="fun">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,rps</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',rps')"></i>
+            </div>
+            <div class="cmd-card-desc">Play Rock Paper Scissors.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="giveaway">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,gstart</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',gstart')"></i>
+            </div>
+            <div class="cmd-card-desc">Starts a giveaway.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageEvents</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="image">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,banner</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',banner')"></i>
+            </div>
+            <div class="cmd-card-desc">Displays a user</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="image">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,cat</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',cat')"></i>
+            </div>
+            <div class="cmd-card-desc">Get a random cat image.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="image">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,dog</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',dog')"></i>
+            </div>
+            <div class="cmd-card-desc">Get a random dog image.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="leveling">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,leaderboard</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',leaderboard')"></i>
+            </div>
+            <div class="cmd-card-desc">Check the server leaderboard.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="leveling">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,level</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',level')"></i>
+            </div>
+            <div class="cmd-card-desc">Check your level and XP.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="leveling">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,levels</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',levels')"></i>
+            </div>
+            <div class="cmd-card-desc">Shows the top ranked users.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="leveling">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,rank</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',rank')"></i>
+            </div>
+            <div class="cmd-card-desc">Check your rank (alias for level).</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,ban</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',ban')"></i>
+            </div>
+            <div class="cmd-card-desc">Bans a user from the server.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">BanMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,bind</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',bind')"></i>
+            </div>
+            <div class="cmd-card-desc">Bind a role as staff.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,fakepermissions</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',fakepermissions')"></i>
+            </div>
+            <div class="cmd-card-desc">Manage fake permissions for roles.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,hardban</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',hardban')"></i>
+            </div>
+            <div class="cmd-card-desc">Bans a user and deletes all messages.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">BanMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,invoke</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',invoke')"></i>
+            </div>
+            <div class="cmd-card-desc">Customize command messages.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,jail</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',jail')"></i>
+            </div>
+            <div class="cmd-card-desc">Jails a user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageRoles</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,kick</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',kick')"></i>
+            </div>
+            <div class="cmd-card-desc">Kicks a user from the server.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">KickMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,lock</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',lock')"></i>
+            </div>
+            <div class="cmd-card-desc">Locks the current channel.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageChannels</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,log</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',log')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure logging channels.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageGuild</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,nuke</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',nuke')"></i>
+            </div>
+            <div class="cmd-card-desc">Nukes the channel (clones and deletes).</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageChannels</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,purge</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',purge')"></i>
+            </div>
+            <div class="cmd-card-desc">Deletes messages.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageMessages</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,setup</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setup')"></i>
+            </div>
+            <div class="cmd-card-desc">Interactive setup for bot configuration.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,setupmute</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setupmute')"></i>
+            </div>
+            <div class="cmd-card-desc">Sets up the Muted role.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,softban</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',softban')"></i>
+            </div>
+            <div class="cmd-card-desc">Bans and immediately unbans a user to clear messages.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">BanMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,tempban</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',tempban')"></i>
+            </div>
+            <div class="cmd-card-desc">Temporarily bans a user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">BanMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,timeout</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',timeout')"></i>
+            </div>
+            <div class="cmd-card-desc">Timeouts a user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill highlight">ModerateMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,unban</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',unban')"></i>
+            </div>
+            <div class="cmd-card-desc">Unbans a user from the server.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">PermissionFlagsBits.BanMembers</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,unlock</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',unlock')"></i>
+            </div>
+            <div class="cmd-card-desc">Unlocks the current channel.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageChannels</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,warn</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',warn')"></i>
+            </div>
+            <div class="cmd-card-desc">Warns a user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageMessages</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,warnings</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',warnings')"></i>
+            </div>
+            <div class="cmd-card-desc">Check warnings of a user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">ManageMessages</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="owner">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,createsupport</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',createsupport')"></i>
+            </div>
+            <div class="cmd-card-desc">Automatically sets up the support server with FULL permissions (Owner Only)</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">PermissionFlagsBits.Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="roles">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,reactionrole</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',reactionrole')"></i>
+            </div>
+            <div class="cmd-card-desc">Manage reaction roles.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,adopt</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',adopt')"></i>
+            </div>
+            <div class="cmd-card-desc">Adopt a child!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,disown</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',disown')"></i>
+            </div>
+            <div class="cmd-card-desc">Disown a child.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,divorce</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',divorce')"></i>
+            </div>
+            <div class="cmd-card-desc">Divorce your partner.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,family</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',family')"></i>
+            </div>
+            <div class="cmd-card-desc">Manage your family.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,marriage</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',marriage')"></i>
+            </div>
+            <div class="cmd-card-desc">Marry another user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,marry</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',marry')"></i>
+            </div>
+            <div class="cmd-card-desc">Propose to someone!</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,profile</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',profile')"></i>
+            </div>
+            <div class="cmd-card-desc">View your social profile.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,roleplay</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',roleplay')"></i>
+            </div>
+            <div class="cmd-card-desc">Roleplay actions.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,setbio</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',setbio')"></i>
+            </div>
+            <div class="cmd-card-desc">Set your profile bio.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,spotify</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',spotify')"></i>
+            </div>
+            <div class="cmd-card-desc">Spotify integration.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="social">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,twitter</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',twitter')"></i>
+            </div>
+            <div class="cmd-card-desc">Twitter integration.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="tickets">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,tsetup</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',tsetup')"></i>
+            </div>
+            <div class="cmd-card-desc">Sets up the ticket system.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,avatar</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',avatar')"></i>
+            </div>
+            <div class="cmd-card-desc">Displays a user</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,botinfo</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',botinfo')"></i>
+            </div>
+            <div class="cmd-card-desc">Displays information about the bot.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,games</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',games')"></i>
+            </div>
+            <div class="cmd-card-desc">Play mini-games.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,google</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',google')"></i>
+            </div>
+            <div class="cmd-card-desc">Search Google.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,help</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',help')"></i>
+            </div>
+            <div class="cmd-card-desc">Displays a list of available commands.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,invite</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',invite')"></i>
+            </div>
+            <div class="cmd-card-desc">Get the bot</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">PermissionFlagsBits.Administrator, // Requesting admin for simplicity, or specify needed perms</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,ping</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',ping')"></i>
+            </div>
+            <div class="cmd-card-desc">Checks the bot</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,poll</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',poll')"></i>
+            </div>
+            <div class="cmd-card-desc">Creates a simple yes/no poll.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,quote</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',quote')"></i>
+            </div>
+            <div class="cmd-card-desc">Generate a quote image.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,review</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',review')"></i>
+            </div>
+            <div class="cmd-card-desc">No description provided.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,say</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',say')"></i>
+            </div>
+            <div class="cmd-card-desc">Send a message or create an embed.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,serverinfo</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',serverinfo')"></i>
+            </div>
+            <div class="cmd-card-desc">Displays information about the server.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,support</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',support')"></i>
+            </div>
+            <div class="cmd-card-desc">Get the link to the support server.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,tts</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',tts')"></i>
+            </div>
+            <div class="cmd-card-desc">Text to Speech.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="utility">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,userinfo</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',userinfo')"></i>
+            </div>
+            <div class="cmd-card-desc">Displays information about a user.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="voicemaster">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">,voicemaster</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText(',voicemaster')"></i>
+            </div>
+            <div class="cmd-card-desc">Manage temporary voice channels.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">none</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill none">Everyone</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">/antinuke</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText('/antinuke')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure anti-nuke protection system.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill highlight">Slash Options</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
+        <div class="cmd-card-ref" data-category="moderation">
+            <div class="cmd-card-header">
+                <div class="cmd-card-title">/antiraid</div>
+                <i class="far fa-copy cmd-copy-icon" onclick="navigator.clipboard.writeText('/antiraid')"></i>
+            </div>
+            <div class="cmd-card-desc">Configure anti-raid protection system.</div>
+            
+            <div class="cmd-section-label">Arguments</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill highlight">Slash Options</span>
+            </div>
+
+            <div class="cmd-section-label">Permissions</div>
+            <div class="cmd-section-value">
+                <span class="cmd-pill admin">Administrator</span>
+            </div>
+        </div>
+    
             </div>
         </div>
     </section>
@@ -1849,41 +1828,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <i class="fas fa-robot text-accent"></i>
-                        Bleed<span>X</span>
-                    </a>
-                    <p>The ultimate multi-purpose Discord bot for moderation, economy, and fun.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="/#features">Features</a></li>
-                        <li><a href="/premium">Premium</a></li>
-                        <li><a href="/commands">Commands</a></li>
-                        <li><a href="/about">About</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="/terms">Terms of Service</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 BleedX. All rights reserved.</p>
+                <p>&copy; 2025 Imperium. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1916,7 +1862,7 @@
                 btn.classList.add('active');
 
                 const category = btn.getAttribute('data-cat');
-
+                
                 commandCards.forEach(card => {
                     if (category === 'all') {
                         card.style.display = 'flex';
@@ -1933,5 +1879,4 @@
         });
     </script>
 </body>
-
 </html>

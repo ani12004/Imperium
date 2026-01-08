@@ -1,7 +1,7 @@
 {
-    "name": "bleedx-website",
+    "name": "imperium-website",
     "version": "1.0.0",
-    "description": "Website for BleedX",
+    "description": "Website for Imperium",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",

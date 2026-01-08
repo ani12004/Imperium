@@ -11,24 +11,7 @@ export default {
         try {
             if (message.author.bot) return;
 
-            /* --- MODMAIL: DM Handling (DISABLED) ---
-            if (!message.guild) {
-               // ... (code omitted for brevity unless I replace it all, which is 100 lines)
-               // Instead of commenting out 100 lines which is messy to restore, I will just add:
-               return; 
-            }
-            */
-
-            // Actually, just checking !message.guild and returning is enough to stop DMs.
-            // But the user might want DMs to do nothing.
             if (!message.guild) return;
-
-            /* --- MODMAIL: Reply to User (DISABLED) ---
-            // Check cache first
-            if (client.activeTickets && client.activeTickets.has(message.channel.id)) {
-                // ...
-            }
-            */
 
             const userId = message.author.id;
             const guildId = message.guild.id;
