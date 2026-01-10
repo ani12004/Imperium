@@ -9,6 +9,21 @@ import db from './utils/database.js'; // Init DB
 config(); // Load .env FIRST
 
 // ---------------------------------
+// Web Server for Render
+// ---------------------------------
+import express from 'express';
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Imperium Bot is Online!');
+});
+
+app.listen(port, () => {
+  logger.info(`Web server is listening on port ${port}`);
+});
+
+// ---------------------------------
 // Create the client BEFORE anything
 // ---------------------------------
 const client = new Client({
