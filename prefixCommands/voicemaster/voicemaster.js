@@ -8,7 +8,7 @@ export default {
     aliases: ["vm", "vc"],
     async execute(message, args) {
         const action = args[0];
-        const config = getGuildConfig(message.guild.id);
+        const config = await getGuildConfig(message.guild.id);
 
         if (action === "setup") {
             if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.reply("❌ You need Administrator permission.");
@@ -37,8 +37,8 @@ export default {
                     ]
                 });
 
-                setGuildConfig(message.guild.id, "voicemaster_category", category.id);
-                setGuildConfig(message.guild.id, "voicemaster_channel", channel.id);
+                await setGuildConfig(message.guild.id, "voicemaster_category", category.id);
+                await setGuildConfig(message.guild.id, "voicemaster_channel", channel.id);
 
                 const embed = new EmbedBuilder()
                     .setColor("#00f3ff")

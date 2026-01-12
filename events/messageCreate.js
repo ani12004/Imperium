@@ -53,7 +53,7 @@ export default {
                 cooldowns.set(userId, now);
                 setTimeout(() => cooldowns.delete(userId), 60000); // 1 min cooldown
 
-                const user = getUser(userId, guildId);
+                const user = await getUser(userId, guildId);
                 const xpGain = Math.floor(Math.random() * 10) + 15; // 15-25 XP
                 const newXp = user.xp + xpGain;
                 const nextLevel = (user.level + 1) * 100;
@@ -64,12 +64,12 @@ export default {
                     message.channel.send(`🎉 ${message.author}, you leveled up to **Level ${newLevel}**!`);
                 }
 
-                updateUser(userId, guildId, { xp: newXp, level: newLevel });
+                await updateUser(userId, guildId, { xp: newXp, level: newLevel });
             }
             // -----------------
 
             // --- COMMAND HANDLING ---
-            const config = getGuildConfig(guildId);
+            const config = await getGuildConfig(guildId);
             const prefix = config.prefix || ',';
 
             if (!message.content.startsWith(prefix)) return;

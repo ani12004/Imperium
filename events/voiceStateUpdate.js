@@ -5,7 +5,7 @@ export default {
     name: "voiceStateUpdate",
     async execute(client, oldState, newState) {
         const guild = newState.guild;
-        const config = getGuildConfig(guild.id);
+        const config = await getGuildConfig(guild.id);
 
         if (!config.voicemaster_channel || !config.voicemaster_category) return;
 

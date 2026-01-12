@@ -24,13 +24,13 @@ export default {
         const guildId = interaction.guild.id;
 
         if (subcommand === "enable") {
-            setGuildConfig(guildId, "antinuke_enabled", 1);
+            await setGuildConfig(guildId, "antinuke_enabled", 1);
             return interaction.reply({ content: "✅ Anti-Nuke protection has been **ENABLED**.", ephemeral: false });
         } else if (subcommand === "disable") {
-            setGuildConfig(guildId, "antinuke_enabled", 0);
+            await setGuildConfig(guildId, "antinuke_enabled", 0);
             return interaction.reply({ content: "⚠️ Anti-Nuke protection has been **DISABLED**.", ephemeral: false });
         } else if (subcommand === "status") {
-            const config = getGuildConfig(guildId);
+            const config = await getGuildConfig(guildId);
             const status = config.antinuke_enabled ? "ENABLED" : "DISABLED";
             const embed = new EmbedBuilder()
                 .setColor(config.antinuke_enabled ? "#00FF00" : "#FF0000")

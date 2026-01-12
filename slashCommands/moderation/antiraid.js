@@ -24,13 +24,13 @@ export default {
         const guildId = interaction.guild.id;
 
         if (subcommand === "enable") {
-            setGuildConfig(guildId, "antiraid_enabled", 1);
+            await setGuildConfig(guildId, "antiraid_enabled", 1);
             return interaction.reply({ content: "✅ Anti-Raid protection has been **ENABLED**.", ephemeral: false });
         } else if (subcommand === "disable") {
-            setGuildConfig(guildId, "antiraid_enabled", 0);
+            await setGuildConfig(guildId, "antiraid_enabled", 0);
             return interaction.reply({ content: "⚠️ Anti-Raid protection has been **DISABLED**.", ephemeral: false });
         } else if (subcommand === "status") {
-            const config = getGuildConfig(guildId);
+            const config = await getGuildConfig(guildId);
             const status = config.antiraid_enabled ? "ENABLED" : "DISABLED";
             const embed = new EmbedBuilder()
                 .setColor(config.antiraid_enabled ? "#00FF00" : "#FF0000")
