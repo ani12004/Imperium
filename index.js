@@ -12,6 +12,7 @@ config(); // Load .env FIRST
 // Web Server for Render
 // ---------------------------------
 import express from 'express';
+import cors from 'cors'; // ADDED
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -74,5 +75,31 @@ async function startBot() {
     process.exit(1);
   }
 }
+
+// ADDED: API Endpoint for Bot Stats
+// ADDED: API Endpoint for Bot Stats
+client.once('ready', () => {
+  // Security: Restrict CORS to specific frontend domains
+  const allowedOrigins = ['https://imperiumbot.netlify.app', 'http://localhost:3000'];
+
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) !== -1 || origin === process.env.FRONTEND_URL) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    }
+  }));
+
+  app.get('/api/bot-stats', (req, res) => {
+    res.json({
+      online: true,
+      serverCount: client.guilds.cache.size,
+      ping: client.ws.ping
+    });
+  });
+});
 
 startBot();
