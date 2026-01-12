@@ -83,7 +83,7 @@ async function startBot() {
 // ADDED: API Endpoint for Bot Stats
 client.once('ready', () => {
   // Security: Restrict CORS to specific frontend domains
-  const allowedOrigins = ['https://imperiumbot.netlify.app', 'http://localhost:3000'];
+  const allowedOrigins = ['https://imperiumbot.netlify.app', 'http://localhost:3000' , 'https://imperiumgg.netlify.app'];
 
   app.use(cors({
     origin: function (origin, callback) {
