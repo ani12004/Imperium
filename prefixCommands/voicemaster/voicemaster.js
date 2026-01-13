@@ -50,7 +50,22 @@ export default {
                     .setDescription("Click the buttons below to manage your voice channel.")
                     .setImage("https://media.discordapp.net/attachments/123/banner.png"); // Placeholder
 
-                await interfaceChannel.send({ embeds: [embed] });
+                const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = await import("discord.js");
+
+                const row1 = new ActionRowBuilder().addComponents(
+                    new ButtonBuilder().setCustomId('vm_lock').setLabel('Lock').setStyle(ButtonStyle.Secondary).setEmoji('🔒'),
+                    new ButtonBuilder().setCustomId('vm_unlock').setLabel('Unlock').setStyle(ButtonStyle.Secondary).setEmoji('🔓'),
+                    new ButtonBuilder().setCustomId('vm_hide').setLabel('Hide').setStyle(ButtonStyle.Secondary).setEmoji('👁️'),
+                    new ButtonBuilder().setCustomId('vm_unhide').setLabel('Unhide').setStyle(ButtonStyle.Secondary).setEmoji('👀')
+                );
+
+                const row2 = new ActionRowBuilder().addComponents(
+                    new ButtonBuilder().setCustomId('vm_claim').setLabel('Claim').setStyle(ButtonStyle.Primary).setEmoji('👑'),
+                    new ButtonBuilder().setCustomId('vm_permit').setLabel('Permit').setStyle(ButtonStyle.Success).setEmoji('✅'),
+                    new ButtonBuilder().setCustomId('vm_reject').setLabel('Reject').setStyle(ButtonStyle.Danger).setEmoji('🚫')
+                );
+
+                await interfaceChannel.send({ embeds: [embed], components: [row1, row2] });
 
                 return message.reply("✅ VoiceMaster setup complete.");
             } catch (e) {

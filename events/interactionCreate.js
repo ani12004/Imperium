@@ -315,6 +315,55 @@ export default {
         await interaction.showModal(modal);
         return;
       }
+
+      // --- VoiceMaster Buttons ---
+      if (customId.startsWith('vm_')) {
+        const { getGuildConfig } = await import('../utils/database.js');
+        const config = await getGuildConfig(interaction.guildId);
+        const voiceChannel = interaction.member.voice.channel;
+
+        if (!config.voicemaster_category) return interaction.reply({ content: "❌ VoiceMaster is not configured.", ephemeral: true });
+
+        if (!voiceChannel || voiceChannel.parentId !== config.voicemaster_category) {
+          return interaction.reply({ content: "❌ You must be in a VoiceMaster channel to use this.", ephemeral: true });
+        }
+
+        // Check Ownership
+        const isOwner = voiceChannel.permissionsFor(interaction.member).has(PermissionsBitField.Flags.ManageChannels);
+
+        // Handle Claim separately as it doesn't require being owner initially
+        if (customId === 'vm_claim') {
+          const ownerOverwrite = voiceChannel.permissionOverwrites.cache.find(perm => perm.type === 1 && perm.allow.has(PermissionsBitField.Flags.ManageChannels));
+          const currentOwnerId = ownerOverwrite ? ownerOverwrite.id : null;
+
+          if (currentOwnerId === interaction.member.id) return interaction.reply({ content: "⚠️ You already own this channel.", ephemeral: true });
+          if (currentOwnerId && voiceChannel.members.has(currentOwnerId)) return interaction.reply({ content: "❌ The owner is still here.", ephemeral: true });
+
+          await voiceChannel.permissionOverwrites.delete(currentOwnerId).catch(() => { });
+          await voiceChannel.permissionOverwrites.edit(interaction.member, { ManageChannels: true, Connect: true });
+          return interaction.reply({ content: "✅ You claimed the channel!", ephemeral: true });
+        }
+
+        if (!isOwner) return interaction.reply({ content: "❌ You do not own this channel.", ephemeral: true });
+
+        switch (customId) {
+          case 'vm_lock':
+            await voiceChannel.permissionOverwrites.edit(interaction.guild.roles.everyone, { Connect: false });
+            return interaction.reply({ content: "🔒 Channel locked.", ephemeral: true });
+          case 'vm_unlock':
+            await voiceChannel.permissionOverwrites.edit(interaction.guild.roles.everyone, { Connect: true });
+            return interaction.reply({ content: "🔓 Channel unlocked.", ephemeral: true });
+          case 'vm_hide':
+            await voiceChannel.permissionOverwrites.edit(interaction.guild.roles.everyone, { ViewChannel: false });
+            return interaction.reply({ content: "👁️ Channel hidden.", ephemeral: true });
+          case 'vm_unhide':
+            await voiceChannel.permissionOverwrites.edit(interaction.guild.roles.everyone, { ViewChannel: true });
+            return interaction.reply({ content: "👀 Channel visible.", ephemeral: true });
+          case 'vm_permit':
+          case 'vm_reject':
+            return interaction.reply({ content: "⚠️ Please use the command for this: `.vm permit @user` or `.vm reject @user`", ephemeral: true });
+        }
+      }
     }
 
     // Handle Channel Selects
