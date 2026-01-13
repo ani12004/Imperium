@@ -16,6 +16,7 @@ export default supabase; // Export client as default
 
 // Helper functions matching the previous API (but ASYNC)
 const guildConfigCache = new Map();
+const economyCache = new Map(); // Global Economy Cache
 const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
 
 export const getGuildConfig = async (guildId) => {
@@ -63,7 +64,8 @@ export const getUser = async (userId, guildId) => {
     .match({ user_id: userId, guild_id: guildId })
     .single();
 
-  return data || { user_id: userId, guild_id: guildId, balance: 0, bank: 0, xp: 0, level: 0 };
+  // Removed balance/bank from default as they are in 'economy' table now
+  return data || { user_id: userId, guild_id: guildId, xp: 0, level: 0 };
 };
 
 export const updateUser = async (userId, guildId, updates) => {
@@ -78,13 +80,21 @@ export const updateUser = async (userId, guildId, updates) => {
 };
 
 export const getEconomy = async (userId) => {
+  // Check Cache
+  if (economyCache.has(userId)) {
+    const { data, timestamp } = economyCache.get(userId);
+    if (Date.now() - timestamp < CACHE_TTL) {
+      return data;
+    }
+  }
+
   const { data, error } = await supabase
     .from('economy')
     .select('*')
     .eq('user_id', userId)
     .single();
 
-  return data || {
+  const defaultData = {
     user_id: userId,
     balance: 0,
     bank: 0,
@@ -98,11 +108,18 @@ export const getEconomy = async (userId) => {
     parent_id: null,
     children: '[]'
   };
+
+  const result = data || defaultData;
+  economyCache.set(userId, { data: result, timestamp: Date.now() });
+  return result;
 };
 
 export const updateEconomy = async (userId, updates) => {
-  const current = await getEconomy(userId);
+  const current = await getEconomy(userId); // Fetches from cache if available
   const updated = { ...current, ...updates };
+
+  // Update Cache Immediately
+  economyCache.set(userId, { data: updated, timestamp: Date.now() });
 
   const { error } = await supabase
     .from('economy')

@@ -1,5 +1,6 @@
 import { AttachmentBuilder } from "discord.js";
 import { createCanvas, loadImage, registerFont } from "canvas";
+import emojis from "../../utils/emojis.js";
 
 // Helper to wrap text
 function wrapText(ctx, text, maxWidth) {
@@ -107,7 +108,7 @@ export default {
             console.log("Quote sent successfully.");
         } catch (error) {
             console.error("Quote Command Error:", error);
-            message.reply("❌ An error occurred while generating the quote.");
+            message.reply(`${emojis.ERROR} An error occurred while generating the quote.`);
         }
     },
 };

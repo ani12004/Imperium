@@ -1,5 +1,6 @@
 import { EmbedBuilder } from "discord.js";
 import { getEconomy, updateEconomy } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "family",
@@ -11,12 +12,12 @@ export default {
 
         if (aliasUsed === "disown") {
             const target = message.mentions.members.first();
-            if (!target) return message.reply("❌ Mention someone to disown.");
+            if (!target) return message.reply(`${emojis.ERROR} Mention someone to disown.`);
 
             const userEco = getEconomy(message.author.id);
             let children = JSON.parse(userEco.children || "[]");
 
-            if (!children.includes(target.id)) return message.reply("❌ They are not your child.");
+            if (!children.includes(target.id)) return message.reply(`${emojis.ERROR} They are not your child.`);
 
             children = children.filter(id => id !== target.id);
             updateEconomy(message.author.id, { children: JSON.stringify(children) });
@@ -27,11 +28,11 @@ export default {
 
         if (aliasUsed === "adopt") {
             const target = message.mentions.members.first();
-            if (!target) return message.reply("❌ Mention someone to adopt.");
-            if (target.id === message.author.id) return message.reply("❌ You cannot adopt yourself.");
+            if (!target) return message.reply(`${emojis.ERROR} Mention someone to adopt.`);
+            if (target.id === message.author.id) return message.reply(`${emojis.ERROR} You cannot adopt yourself.`);
 
             const targetEco = getEconomy(target.id);
-            if (targetEco.parent_id) return message.reply("❌ They already have a parent.");
+            if (targetEco.parent_id) return message.reply(`${emojis.ERROR} They already have a parent.`);
 
             message.channel.send(`${target}, **${message.author.username}** wants to adopt you! Type \`yes\` to accept.`);
 
@@ -46,11 +47,11 @@ export default {
                 updateEconomy(message.author.id, { children: JSON.stringify(children) });
                 updateEconomy(target.id, { parent_id: message.author.id });
 
-                message.channel.send(`👪 **${message.author.username}** has adopted **${target.user.username}**!`);
+                message.channel.send(`${emojis.USERS} **${message.author.username}** has adopted **${target.user.username}**!`);
             });
 
             collector.on('end', (collected, reason) => {
-                if (reason === 'time') message.channel.send("❌ Adoption offer expired.");
+                if (reason === 'time') message.channel.send(`${emojis.ERROR} Adoption offer expired.`);
             });
         }
     },

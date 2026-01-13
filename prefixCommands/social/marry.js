@@ -1,5 +1,6 @@
 import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } from "discord.js";
 import { getEconomy, updateEconomy } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "marry",
@@ -18,14 +19,14 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor("#FFC0CB") // Pink
-            .setTitle("💍 Marriage Proposal")
+            .setTitle(`${emojis.HEART} Marriage Proposal`)
             .setDescription(`${target}, **${message.author.username}** has proposed to you! Do you accept?`)
             .setFooter({ text: "You have 30 seconds to respond." });
 
         const row = new ActionRowBuilder()
             .addComponents(
-                new ButtonBuilder().setCustomId('accept_marriage').setLabel('I Do! 💖').setStyle(ButtonStyle.Success),
-                new ButtonBuilder().setCustomId('decline_marriage').setLabel('No... 💔').setStyle(ButtonStyle.Danger)
+                new ButtonBuilder().setCustomId('accept_marriage').setLabel('I Do!').setStyle(ButtonStyle.Success).setEmoji(emojis.HEART),
+                new ButtonBuilder().setCustomId('decline_marriage').setLabel('No...').setStyle(ButtonStyle.Danger).setEmoji('💔')
             );
 
         const msg = await message.channel.send({ content: `${target}`, embeds: [embed], components: [row] });
@@ -43,8 +44,8 @@ export default {
 
                 const successEmbed = new EmbedBuilder()
                     .setColor("Gold")
-                    .setTitle("🎉 Just Married! 🎉")
-                    .setDescription(`**${message.author.username}** and **${target.username}** are now married! 💍💖`)
+                    .setTitle(`${emojis.ANNOUNCE} Just Married! ${emojis.ANNOUNCE}`)
+                    .setDescription(`**${message.author.username}** and **${target.username}** are now married! ${emojis.HEART} ${emojis.COUPLE}`)
                     .setImage("https://media.tenor.com/2j2j2j2j2j2j/anime-wedding.gif"); // Placeholder GIF
 
                 await i.update({ embeds: [successEmbed], components: [] });

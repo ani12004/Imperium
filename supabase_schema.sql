@@ -21,18 +21,13 @@ CREATE TABLE IF NOT EXISTS guild_configs (
   antiraid_enabled INTEGER DEFAULT 0
 );
 
--- 2. Users (Economy & Leveling)
+-- 2. Users (Leveling & Guild Data)
 -- Note: Supabase/Postgres has composite primary keys support.
 CREATE TABLE IF NOT EXISTS users (
   user_id TEXT,
   guild_id TEXT,
-  balance INTEGER DEFAULT 0,
-  bank INTEGER DEFAULT 0,
   xp INTEGER DEFAULT 0,
   level INTEGER DEFAULT 0,
-  last_daily INTEGER DEFAULT 0,
-  last_work INTEGER DEFAULT 0,
-  last_rob INTEGER DEFAULT 0,
   PRIMARY KEY (user_id, guild_id)
 );
 
@@ -52,13 +47,13 @@ CREATE TABLE IF NOT EXISTS economy (
   user_id TEXT PRIMARY KEY,
   balance INTEGER DEFAULT 0,
   bank INTEGER DEFAULT 0,
-  last_daily INTEGER DEFAULT 0,
-  last_work INTEGER DEFAULT 0,
-  last_rob INTEGER DEFAULT 0,
+  last_daily BIGINT DEFAULT 0,
+  last_work BIGINT DEFAULT 0,
+  last_rob BIGINT DEFAULT 0,
   rules_accepted INTEGER DEFAULT 0,
   partner_id TEXT,
   bio TEXT,
-  marriage_time INTEGER,
+  marriage_time BIGINT,
   parent_id TEXT,
   children TEXT
 );

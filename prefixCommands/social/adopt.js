@@ -1,5 +1,6 @@
 import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } from "discord.js";
 import { getEconomy, updateEconomy } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "adopt",
@@ -20,7 +21,7 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor("Green")
-            .setTitle("👪 Adoption Proposal")
+            .setTitle(`${emojis.USERS} Adoption Proposal`)
             .setDescription(`${target}, **${message.author.username}** wants to adopt you! Do you accept?`)
             .setFooter({ text: "You have 30 seconds to respond." });
 
@@ -52,8 +53,8 @@ export default {
 
                 const successEmbed = new EmbedBuilder()
                     .setColor("Green")
-                    .setTitle("🎉 Adoption Successful! 🎉")
-                    .setDescription(`**${message.author.username}** has adopted **${target.username}**! 👪`);
+                    .setTitle(`${emojis.ANNOUNCE} Adoption Successful! ${emojis.ANNOUNCE}`)
+                    .setDescription(`**${message.author.username}** has adopted **${target.username}**! ${emojis.USERS}`);
 
                 await i.update({ embeds: [successEmbed], components: [] });
             } else {

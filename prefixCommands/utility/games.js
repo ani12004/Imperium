@@ -1,4 +1,5 @@
 import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "games",
@@ -8,7 +9,7 @@ export default {
     async execute(message, args) {
         const embed = new EmbedBuilder()
             .setColor("#FF00FF")
-            .setTitle("🎮 Mini-Games")
+            .setTitle(`${emojis.DICE} Mini-Games`)
             .setDescription("Select a game to play:")
             .addFields(
                 { name: "Tic Tac Toe", value: "Classic 3x3 game.", inline: true },

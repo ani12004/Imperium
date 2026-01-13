@@ -1,5 +1,6 @@
 import { EmbedBuilder } from "discord.js";
 import { getEconomy } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "profile",
@@ -30,11 +31,11 @@ export default {
             .setThumbnail(target.displayAvatarURL())
             .setDescription(`**Bio:**\n${user.bio || "No bio set. Use `s?setbio` to set one."}`)
             .addFields(
-                { name: "💰 Balance", value: `$${user.balance}`, inline: true },
-                { name: "🏦 Bank", value: `$${user.bank}`, inline: true },
-                { name: "💍 Partner", value: partnerName, inline: true },
-                { name: "👪 Parent", value: parentName, inline: true },
-                { name: "👶 Children", value: `${childrenCount}`, inline: true }
+                { name: `${emojis.WALLET} Balance`, value: `$${user.balance}`, inline: true },
+                { name: `${emojis.BANK} Bank`, value: `$${user.bank}`, inline: true },
+                { name: `${emojis.HEART} Partner`, value: partnerName, inline: true },
+                { name: `${emojis.USERS} Parent`, value: parentName, inline: true },
+                { name: `${emojis.USERS} Children`, value: `${childrenCount}`, inline: true }
             );
 
         if (user.marriage_time) {

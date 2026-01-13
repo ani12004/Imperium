@@ -7,26 +7,24 @@ export default {
     description: "Shows the richest users.",
     aliases: ["lb", "top"],
     async execute(message, args) {
+        // Economy is Global, so we query the economy table directly
         const { data: topUsers } = await db
-            .from('users')
+            .from('economy')
             .select('user_id, balance')
-            .eq('guild_id', message.guild.id)
             .order('balance', { ascending: false })
             .limit(10);
 
-        if (!topUsers.length) return message.reply("No data found.");
+        if (!topUsers || topUsers.length === 0) return message.reply("No data found.");
 
         const embed = new EmbedBuilder()
             .setColor("Gold")
-            .setTitle(`${emojis.TROPHY} ${message.guild.name} Leaderboard`)
+            .setTitle(`${emojis.TROPHY} Global Economy Leaderboard`)
             .setTimestamp();
 
         let description = "";
         for (const [index, data] of topUsers.entries()) {
-            // Fetch user to get tag, might be slow if many, but for 10 it's ok-ish or just use ID
-            // Ideally we cache or just show ID if not in cache, but let's try to get username
-            const user = await message.guild.members.fetch(data.user_id).catch(() => null);
-            const name = user ? user.user.username : "Unknown User";
+            const user = await message.client.users.fetch(data.user_id).catch(() => null);
+            const name = user ? user.username : "Unknown User";
             description += `**${index + 1}.** ${name} - **${emojis.COIN}${data.balance}**\n`;
         }
 

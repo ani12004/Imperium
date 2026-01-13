@@ -54,15 +54,15 @@ export default {
 function getCategoryEmoji(category) {
   const map = {
     Moderation: emojis.SHIELD,
-    Utility: emojis.LOADING,
+    Utility: emojis.PING, // Changed from LOADING
     Economy: emojis.COIN,
-    Leveling: emojis.TROPHY, // or STAR
+    Leveling: emojis.TROPHY,
     Fun: emojis.DICE,
-    Image: emojis.PICTURE || "🖼️", // Don't have PICTURE in emojis.js, falling back or using STAR
+    Image: emojis.STAR, // Fallback to STAR
     Giveaway: emojis.TROPHY,
     Tickets: emojis.TICKET,
     Admin: emojis.LOCK,
-    Info: emojis.INFO || "ℹ️"
+    Info: emojis.ANNOUNCE // Changed from INFO fallback
   };
   return map[category] || emojis.STAR;
 }

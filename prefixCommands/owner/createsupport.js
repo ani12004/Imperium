@@ -1,4 +1,5 @@
 import { PermissionsBitField, ChannelType, PermissionFlagsBits } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "createsupport",
@@ -9,7 +10,7 @@ export default {
 
         // 1. Owner Check
         if (message.author.id !== process.env.OWNER_ID) {
-            return message.reply(`❌ Restricted to owner. (Debug: Your ID: ${message.author.id}, Config ID: ${process.env.OWNER_ID || 'Not Set'})`);
+            return message.reply(`${emojis.ERROR} Restricted to owner. (Debug: Your ID: ${message.author.id}, Config ID: ${process.env.OWNER_ID || 'Not Set'})`);
         }
 
         const guild = message.guild;
@@ -17,7 +18,7 @@ export default {
 
         // Check if bot has Administrator permission
         if (!botMember.permissions.has(PermissionsBitField.Flags.Administrator)) {
-            return message.reply("❌ I need `Administrator` permission to set up the server.");
+            return message.reply(`${emojis.ERROR} I need \`Administrator\` permission to set up the server.`);
         }
 
         const statusMsg = await message.reply("🚀 Starting **Advanced** support server setup... This will configure all roles and permissions.");
@@ -230,11 +231,11 @@ export default {
                 }
             }
 
-            await statusMsg.edit("✅ **Advanced Setup Complete!**\n\n• **Roles:** Created with specific permissions (Mod, Support, Member, etc.).\n• **Channels:** Configured with correct overrides (Muted role, Read-only channels, Staff access).");
+            await statusMsg.edit(`${emojis.SUCCESS} **Advanced Setup Complete!**\n\n• **Roles:** Created with specific permissions (Mod, Support, Member, etc.).\n• **Channels:** Configured with correct overrides (Muted role, Read-only channels, Staff access).`);
 
         } catch (error) {
             console.error(error);
-            await statusMsg.edit(`❌ An error occurred during setup: ${error.message}`);
+            await statusMsg.edit(`${emojis.ERROR} An error occurred during setup: ${error.message}`);
         }
     }
 };

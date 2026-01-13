@@ -1,4 +1,5 @@
 import { EmbedBuilder } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 const actions = {
     hug: ["https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif", "https://media.giphy.com/media/3bqtLDeiDtwhq/giphy.gif"],
@@ -16,10 +17,10 @@ export default {
     async execute(message, args) {
         let action = args[0]?.toLowerCase();
 
-        if (!actions[action]) return message.reply("❌ Available actions: hug, kiss, slap, pat, kill.");
+        if (!actions[action]) return message.reply(`${emojis.ERROR} Available actions: hug, kiss, slap, pat, kill.`);
 
         const target = message.mentions.members.first();
-        if (!target) return message.reply(`❌ You need to mention someone to ${action}!`);
+        if (!target) return message.reply(`${emojis.ERROR} You need to mention someone to ${action}!`);
 
         const gifs = actions[action];
         const gif = gifs[Math.floor(Math.random() * gifs.length)];

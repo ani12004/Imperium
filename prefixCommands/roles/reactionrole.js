@@ -1,5 +1,6 @@
 import { PermissionsBitField } from "discord.js";
 import { addReactionRole, removeReactionRole } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "reactionrole",
@@ -15,26 +16,26 @@ export default {
             const emoji = args[3];
             const role = message.mentions.roles.first() || message.guild.roles.cache.get(args[4]);
 
-            if (!channel || !messageId || !emoji || !role) return message.reply("❌ Usage: ,rr add #channel [messageId] [emoji] @role");
+            if (!channel || !messageId || !emoji || !role) return message.reply(`${emojis.ERROR} Usage: ,rr add #channel [messageId] [emoji] @role`);
 
             try {
                 const targetMessage = await channel.messages.fetch(messageId);
                 await targetMessage.react(emoji);
                 addReactionRole(message.guild.id, channel.id, messageId, emoji, role.id);
-                return message.reply(`✅ Reaction role added for ${emoji} -> **${role.name}**.`);
+                return message.reply(`${emojis.SUCCESS} Reaction role added for ${emoji} -> **${role.name}**.`);
             } catch (e) {
-                return message.reply("❌ Failed to fetch message or react. Check ID and permissions.");
+                return message.reply(`${emojis.ERROR} Failed to fetch message or react. Check ID and permissions.`);
             }
         } else if (action === "remove") {
             const messageId = args[1];
             const emoji = args[2];
 
-            if (!messageId || !emoji) return message.reply("❌ Usage: ,rr remove [messageId] [emoji]");
+            if (!messageId || !emoji) return message.reply(`${emojis.ERROR} Usage: ,rr remove [messageId] [emoji]`);
 
             removeReactionRole(messageId, emoji);
-            return message.reply(`✅ Reaction role removed for ${emoji}.`);
+            return message.reply(`${emojis.SUCCESS} Reaction role removed for ${emoji}.`);
         } else {
-            return message.reply("❌ Usage: ,rr add/remove ...");
+            return message.reply(`${emojis.ERROR} Usage: ,rr add/remove ...`);
         }
     },
 };

@@ -1,5 +1,6 @@
 import { EmbedBuilder } from "discord.js";
 import { getEconomy, updateEconomy } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "marriage",
@@ -13,7 +14,7 @@ export default {
 
         if (aliasUsed === "divorce") {
             const userEco = getEconomy(message.author.id);
-            if (!userEco.partner_id) return message.reply("❌ You are not married!");
+            if (!userEco.partner_id) return message.reply(`${emojis.ERROR} You are not married!`);
 
             const partnerId = userEco.partner_id;
             updateEconomy(message.author.id, { partner_id: null, marriage_time: null });
@@ -23,14 +24,14 @@ export default {
         }
 
         const target = message.mentions.members.first();
-        if (!target) return message.reply("❌ Mention someone to marry.");
-        if (target.id === message.author.id) return message.reply("❌ You cannot marry yourself.");
+        if (!target) return message.reply(`${emojis.ERROR} Mention someone to marry.`);
+        if (target.id === message.author.id) return message.reply(`${emojis.ERROR} You cannot marry yourself.`);
 
         const userEco = getEconomy(message.author.id);
         const targetEco = getEconomy(target.id);
 
-        if (userEco.partner_id) return message.reply("❌ You are already married!");
-        if (targetEco.partner_id) return message.reply("❌ They are already married!");
+        if (userEco.partner_id) return message.reply(`${emojis.ERROR} You are already married!`);
+        if (targetEco.partner_id) return message.reply(`${emojis.ERROR} They are already married!`);
 
         message.channel.send(`${target}, **${message.author.username}** is proposing to you! Type \`yes\` to accept.`);
 
@@ -40,11 +41,11 @@ export default {
         collector.on('collect', async m => {
             updateEconomy(message.author.id, { partner_id: target.id, marriage_time: Date.now() });
             updateEconomy(target.id, { partner_id: message.author.id, marriage_time: Date.now() });
-            message.channel.send(`💍 **${message.author.username}** and **${target.user.username}** are now married!`);
+            message.channel.send(`${emojis.HEART} **${message.author.username}** and **${target.user.username}** are now married!`);
         });
 
         collector.on('end', (collected, reason) => {
-            if (reason === 'time') message.channel.send("❌ Proposal expired.");
+            if (reason === 'time') message.channel.send(`${emojis.ERROR} Proposal expired.`);
         });
     },
 };
