@@ -10,6 +10,10 @@ export default {
         const action = args[0];
         const config = await getGuildConfig(message.guild.id);
 
+        if (!action || action === "help") {
+            return message.reply("❌ Usage: `.vm setup` | `.vm claim` | `.vm lock` | `.vm unlock` | `.vm permit @user` | `.vm reject @user`");
+        }
+
         if (action === "setup") {
             if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.reply("❌ You need Administrator permission.");
 
@@ -58,6 +62,9 @@ export default {
         // Check if user is in a voice channel
         const voiceChannel = message.member.voice.channel;
         if (!voiceChannel) return message.reply("❌ You must be in a voice channel to use this.");
+
+        // Check if config exists
+        if (!config || !config.voicemaster_category) return message.reply("❌ VoiceMaster is not set up. Ask an admin to run `.vm setup`.");
 
         // Check if it's a temp channel (simple check: is it in the VM category?)
         if (voiceChannel.parentId !== config.voicemaster_category) return message.reply("❌ You are not in a VoiceMaster channel.");
