@@ -1,0 +1,51 @@
+🚀 **Imperium: The Ultimate All-in-One Discord Bot** 🚀
+
+Looking to elevate your Discord server? Meet **Imperium** – the powerful, feature-rich bot designed to handle everything from moderation to economy with style.
+
+💎 **WHY CHOOSE IMPERIUM?** 💎
+Imperium combines professional-grade moderation tools with an addictive global economy and immersive social features. It's not just a bot; it's an experience.
+
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+🌟 **FEATURE HIGHLIGHTS** 🌟
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+🌍 **Universal Economy**
+• Global balance across all servers!
+• Banking system with Deposit/Withdraw.
+• Work, Crime, Rob, and Trading commands.
+• Climb the global leaderboard!
+
+❤️ **Advanced Social System**
+• **Profiles:** Customizable user bios and stats.
+• **Relationships:** Marry your friends, adopt children, and build a Family Tree (`s?family`).
+• **Interactions:** Hug, Kiss, Slap, Pat, Poke, and more (OwO style!).
+
+🛡️ **Next-Gen Moderation**
+• **Secure:** Ban, Kick, Timeout, and Warn commands.
+• **Nuke:** Clear and recreate channels instantly.
+• **Lock/Unlock:** Secure channels during raids.
+• **Modmail:** Private DM-based support tickets.
+
+🎫 **Support Ticket System**
+• sleek button-based ticket panels (`s?tsetup`).
+• Transcripts and easy management for staff.
+
+📈 **Leveling & Ranks**
+• Track activity with XP and Levels.
+• Beautiful custom Rank Cards.
+• Level-up announcements.
+
+🎮 **Fun & Utility**
+• Image Generation (Fake Quotes).
+• Polls, User Info, Server Info.
+• Gambling (Slots, Coinflip) and Animal Collections.
+
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+🔗 **LINKS**
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+🤖 **Invite Imperium:** [Insert Your Bot Invite Link Here]
+🌐 **Website:** https://imperiumgg.netlify.app
+💬 **Support Server:** https://discord.gg/tN5MvnTTXK
+
+⚠️ *Replace [Insert Your Bot Invite Link Here] with your actual bot invite URL!*

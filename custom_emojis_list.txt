@@ -1,0 +1,56 @@
+# IMPERIUM CUSTOM EMOJI SETUP LIST
+-----------------------------------------------
+Use this list as a guide for what emojis you need to upload to your Discord server or Bot Application.
+Once uploaded, you will need to copy their unique IDs (e.g., <name:id>) to replace the defaults in the code.
+
+### 🪙 ECONOMY
+[ ] `ImperiumCoin` - Main currency symbol (replaces 🪙 or $)
+[ ] `ImperiumBank` - Bank icon (replaces 🏦)
+[ ] `Eco_Wallet` - Wallet icon (replaces 👛)
+[ ] `Eco_Bag` - Money bag (replaces 💰)
+[ ] `Eco_Rich` - High wealth indicator
+[ ] `Eco_Poor` - Low wealth/debt indicator
+
+### 🛡️ MODERATION
+[ ] `Mod_Ban` - Ban hammer icon (replaces 🔨)
+[ ] `Mod_Kick` - Boot or Kick icon (replaces 👢)
+[ ] `Mod_Mute` - Mute/Timeout icon (replaces 🔇 or ⏳)
+[ ] `Mod_Warn` - Warning shield or sign (replaces ⚠️)
+[ ] `Mod_Shield` - General security/admin icon (replaces 🛡️)
+[ ] `Mod_Trash` - Purge/Delete icon (replaces 🗑️)
+
+### 🎫 TICKETS & SUPPORT
+[ ] `Ticket_Open` - Ticket icon (replaces 📩 or 🎫)
+[ ] `Ticket_Close` - Close ticket icon (replaces 🔒)
+[ ] `Ticket_Staff` - Staff badge
+
+### ❤️ SOCIAL & PROFILE
+[ ] `Social_Heart` - Marriage/Love icon (replaces ❤️)
+[ ] `Social_Ring` - Engagement ring (replaces 💍)
+[ ] `Social_Users` - Family/Group icon (replaces 👥)
+[ ] `Social_Rep` - Reputation star (replaces ⭐)
+
+### ⚙️ UTILITY & SYSTEM
+[ ] `Sys_Loading` - Animated loading spinner (Crucial for "processing" messages)
+[ ] `Sys_Success` - Green Checkmark (replaces ✅)
+[ ] `Sys_Error` - Red Cross/X (replaces ❌)
+[ ] `Sys_Alert` - Alert/Important icon (replaces ❗)
+[ ] `Sys_Ping` - Connectivity/Wifi icon (replaces 📶)
+[ ] `Sys_DotOnline` - Green Status Dot
+[ ] `Sys_DotOffline` - Grey/Red Status Dot
+
+### 🎮 GAMBLING & FUN
+[ ] `Game_Slot` - Slot machine icon (replaces 🎰)
+[ ] `Game_Dice` - Dice icon (replaces 🎲)
+[ ] `Game_Trophy` - Winner trophy (replaces 🏆)
+
+### 🧭 NAVIGATION (For Embeds/Menus)
+[ ] `Nav_Left` - Previous page arrow (replaces ◀️)
+[ ] `Nav_Right` - Next page arrow (replaces ▶️)
+[ ] `Nav_Home` - Home/Menu button (replaces 🏠)
+
+-----------------------------------------------
+**NEXT STEPS:**
+1. Upload these images to your Discord Server.
+2. Type `\` followed by the emoji name and hit enter in Discord to get the ID (e.g., `<:ImperiumCoin:1234567890>`).
+3. We will create a `config.js` or `emojis.js` file to store these IDs centrally.
