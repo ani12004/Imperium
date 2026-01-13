@@ -1,0 +1,1003 @@
+### **Server Commands (300+)**
+prefix: View guild prefix
+prefix self: Set personal prefix across all servers with bleed
+prefix remove: Remove command prefix for server
+prefix set: Set command prefix for server
+boosterrole: Create your own booster role
+boosterrole rename: Edit your booster roles name
+boosterrole limit: Set limit for booster roles
+boosterrole filter: Blacklist words for booster role names
+boosterrole filter list: Blacklist words for booster role names
+boosterrole base: Set the base role for where boost roles will go under
+boosterrole color: Get your own custom booster color role
+boosterrole award: Reward a member a specific role upon boost
+boosterrole award view: View the current award role
+boosterrole award unset: Remove the reward role
+boosterrole link: Link an existing role to be a booster role
+boosterrole icon: Set an icon for booster role
+boosterrole share: Share your booster role with others
+boosterrole share list: List all members in your booster role
+boosterrole share max: Limit how many members can be in a booster role
+boosterrole share limit: Limit how many booster roles a member can have
+boosterrole share remove: Remove yourself from a shared booster role
+boosterrole remove: Remove custom color booster role
+boosterrole dominant: Set booster roles color to the most dominant color in avatar
+boosterrole list: View all booster roles
+boosterrole random: Set a booster role with a random hex code
+boosterrole cleanup: Clean up unused booster roles
+settings: Server configuration settings
+googlesafetylevel: Enable or disable safety level for Google commands
+settings modlog: Set mod logs for punishments in guild
+settings reset: Reset moderation configuration settings
+settings jail: Set the jail channel
+settings muted: Set the text muted role
+settings autonick: Set a nickname to be assigned to members when they join
+settings rmuted: Set the reaction muted role
+settings dj: Set DJ role for music player
+settings premiumrole: Set the Premium Members role for Server Subscriptions
+settings config: View settings configuration for guild
+settings resetcases: Reset jail-log cases
+settings joinlogs: Set a channel to log join/leaves in a server
+settings baserole: Set the base role for where boost roles will go under
+settings imuted: Set the image muted role
+settings jailmsg: Set a custom jail message
+settings staff: Set staff role(s)
+settings staff list: View a list of all staff roles
+settings disablecustomfms: Disable custom Now Playing commands
+settings autoplay: Set auto play for music
+settings jailroles: Enable or disable removal of roles for jail
+boosts: Set up boost messages in one or multiple channels
+boosts add: Add a boost message to a channel
+boosts view: View a boost message for a channel
+boosts list: View all boost messages
+boosts variables: View all available variables for boost messages
+boosts remove: Remove a boost message from a channel
+alias: Create your own shortcuts for commands
+alias view: View command execution for alias
+alias list: List every alias for all commands
+alias add: Create an alias for command
+alias reset: Reset every alias for all commands
+alias removeall: Remove an alias for command
+alias remove: Remove an alias for command
+stickymessage: Set up a sticky message in one or multiple channels
+stickymessage remove: Remove a sticky message from a channel
+stickymessage view: View the sticky message for a channel
+stickymessage list: View all sticky messages
+stickymessage add: Add a sticky message to a channel
+welcome: Set up a welcome message in one or multiple channels
+welcome list: View all welcome messages
+welcome remove: Remove a welcome message from a channel
+welcome view: View welcome message for a channel
+welcome variables: View all available variables for welcome messages
+welcome add: Add a welcome message for a channel
+goodbye: Set up a goodbye message in one or multiple channels
+goodbye view: View goodbye message for a channel
+goodbye list: View all goodbye messages
+goodbye remove: Remove a goodbye message from a channel
+goodbye variables: View all available variables for goodbye messages
+goodbye add: Add a goodbye message for a channel
+imgonly: Set up image + caption only channels
+imgonly list: View all gallery channels
+imgonly remove: Remove a gallery channel
+imgonly add: Set a gallery channel
+invoke: Change punishment messages for DM or command response
+invoke timeout: Change timeout message for DM or command response
+invoke timeout dm: Change timeout message for Direct Messages
+invoke timeout dm view: View the timeout message for Direct Messages
+invoke timeout message: Change timeout message for command response
+invoke timeout message view: View the timeout message for command response
+invoke tempban: Change tempban message for DM or command response
+invoke tempban dm: Change tempban message for Direct Messages
+invoke tempban dm view: View the tempban message for Direct Messages
+invoke tempban message: Change tempban message for command response
+invoke tempban message view: View the tempban message for command response
+invoke runmute: Change runmute message for command response
+invoke runmute message: Change runmute message for command response
+invoke runmute message view: View the runmute message for command response
+invoke kick: Change kick message for DM or command response
+invoke kick message: Change kick message for command response
+invoke kick message view: View the kick message for command response
+invoke kick dm: Change kick message for Direct Messages
+invoke kick dm view: View the kick message for Direct Messages
+invoke softban: Change softban message for DM or command response
+invoke softban message: Change softban message for command response
+invoke softban message view: View the softban message for command response
+invoke softban dm: Change softban message for Direct Messages
+invoke softban dm view: View the softban message for Direct Messages
+invoke hardban: Change hardban message for DM or command response
+invoke hardban message: Change hardban message for command response
+invoke hardban message view: View the hardban message for command response
+invoke unban: Change unban message for DM or command response
+invoke unban message: Change unban message for command response
+invoke unban message view: View the unban message for command response
+invoke unban dm: Change unban message for Direct Messages
+invoke unban dm view: View the unban message for Direct Messages
+invoke unmute: Change unmute message for DM or command response
+invoke unmute message: Change unmute message for command response
+invoke unmute message view: View the unmute message for command response
+invoke unmute dm: Change unmute message for Direct Messages
+invoke unmute dm view: View the unmute message for Direct Messages
+invoke mute: Change mute message for DM or command response
+invoke mute message: Change mute message for command response
+invoke mute message view: View the mute message for command response
+invoke mute dm: Change mute message for Direct Messages
+invoke mute dm view: View the mute message for Direct Messages
+invoke ban: Change ban message for DM or command response
+invoke ban dm: Change ban message for Direct Messages
+invoke ban dm view: View the ban message for Direct Messages
+invoke ban message: Change ban message for command response
+invoke ban message view: View the ban message for command response
+invoke iunmute: Change iunmute message for command response
+invoke iunmute message: Change iunmute message for command response
+invoke iunmute message view: View the iunmute message for command response
+invoke jail: Change jail message for DM or command response
+invoke jail message: Change jail message for command response
+invoke jail message view: View the jail message for command response
+invoke jail dm: Change jail message for Direct Messages
+invoke jail dm view: View the jail message for Direct Messages
+invoke unjail: Change unjail message for DM or command response
+invoke unjail dm: Change unjail message for Direct Messages
+invoke unjail dm view: View the unjail message for Direct Messages
+invoke unjail message: Change unjail message for command response
+invoke unjail message view: View the unjail message for command response
+invoke warn: Change warn message for DM or command response
+invoke warn dm: Change warn message for Direct Messages
+invoke warn dm view: View the warn message for Direct Messages
+invoke warn message: Change warn message for command response
+invoke warn message view: View the warn message for command response
+invoke rmute: Change rmute message for command response
+invoke rmute message: Change rmute message for command response
+invoke rmute message view: View the rmute message for command response
+invoke imute: Change imute message for command response
+invoke imute message: Change imute message for command response
+invoke imute message view: View the imute message for command response
+invoke untimeout: Change untimeout message for DM or command response
+invoke untimeout message: Change untimeout message for command response
+invoke untimeout message view: View the untimeout message for command response
+invoke untimeout dm: Change untimeout message for Direct Messages
+invoke untimeout dm view: View the untimeout message for command response
+filter: View a variety of options to help clean chat
+filter massmention: Delete any message exceeding the threshold for user mentions
+filter massmention exempt: Exempt roles from the mass mention filter
+filter massmention exempt list: View list of roles exempted from massmention filter
+filter add: Add a filtered word
+filter reset: Reset all filtered words
+filter spoilers: Delete any message exceeding the threshold for spoilers
+filter spoilers exempt: Exempt roles from the spoilers filter
+filter spoilers exempt list: View list of roles exempted from spoilers filter
+filter remove: Remove a filtered word
+filter wordmigrate: Migrate your filtered words to Discords Automod
+filter musicfiles: Delete any message that contains a music file
+filter musicfiles exempt: Exempt roles from the music files filter
+filter musicfiles exempt list: View list of roles exempted from musicfiles filter
+filter spam: Delete messages from users that send messages too fast
+filter spam exempt: Exempt roles from the antispam filter
+filter spam exempt list: View list of roles exempted from spam filter
+filter exempt: Exempt roles from the word filter
+filter exempt list: View list of roles exempted from nicknames filter
+filter snipe: Filter snipe command from allowing certain content
+filter caps: Delete messages that contain too many uppercase characters
+filter caps exempt: Exempt roles from the caps filter
+filter caps exempt list: View list of roles exempted from caps filter
+filter links: Delete any message that contains a link
+filter links exempt: Exempt roles from the links filter
+filter links exempt list: View list of roles exempted from links filter
+filter links whitelist: Whitelist links from the links filter
+filter invites: Delete any message that contains a server link
+filter invites exempt: Exempt roles from the invite filter
+filter invites exempt list: View list of roles exempted from invites filter
+filter list: View a list of filtered words in guild
+filter regex: Add or remove a regex pattern
+filter emoji: Delete any message exceeding the threshold for emojis
+filter emoji exempt: Exempt roles from the emoji filter
+filter emoji exempt list: View list of roles exempted from emoji filter
+filter whitelist: Add or remove a whitelisted word
+autoresponder: Set up automatic replies to messages matching a trigger
+autoresponder role: Assign or remove roles on messages matching a trigger
+autoresponder role add: Add a role to be given when an autoresponder is triggered
+autoresponder role add list: View roles assigned upon messages matching a trigger
+autoresponder role remove: Add a role to be removed when an autoresponder is triggered
+autoresponder role remove list: View roles removed upon messages matching a trigger
+autoresponder variables: View a list of available variables
+autoresponder update: Update a reply for a trigger word
+autoresponder reset: Remove every auto response
+autoresponder exclusive: Toggle exclusive access for an autoresponder to a role or channel
+autoresponder exclusive list: View a list of roles and channels that have exclusive access to an autoresponder
+autoresponder add: Create a reply for a trigger word
+autoresponder list: View a list of auto-reply triggers in guild
+autoresponder remove: Remove a reply for a trigger word
+pagination: Set up multiple embeds on one message
+pagination reset: Remove every existing pagination in guild
+pagination add: Add a page to a pagination embed
+pagination delete: Delete a pagination embed entirely
+pagination list: View all existing pagination embeds
+pagination remove: Remove a page from a pagination embed
+pagination set: Set up an existing embed to be paginated
+pagination restorereactions: Restore reactions to an existing pagination
+pagination update: Update an existing page on pagination embed
+enablecommand: Enable a previously disabled command in a channel
+enablecommand all: Enable a command in every channel
+copydisabled: Copy disabled modules, events, filters and commands to another channel
+disablecommand: Disable a command in a channel
+disablecommand all: Disable a command in every channel
+disablecommand list: View a list of disabled commands in guild
+enableevent: Enable a bot event in a channel
+enableevent all: Enables a bot event in every channel
+disableevent: Disable a bot event in a channel
+disableevent all: Disable a bot event in every channel
+disableevent list: View a list of disabled bot events in guild
+enablemodule: Enable a module in a channel
+enablemodule all: Enables a module in every channel
+disablemodule: Disable a module in a channel
+disablemodule list: View a list of disabled modules in guild
+disablemodule all: Disable a module in every channel
+ignore: Ignore a member or channel
+ignore list: View a list of ignored members or channels
+ignore add: Ignore a member or channel
+ignore remove: Remove ignoring for a member or channel
+seticon: Set a new guild icon
+setsplashbackground: Set a new guild splash background
+setbanner: Set a new guild banner
+unpin: Unpin a message
+pin: Pin the most recent message or by URL
+firstmessage: Get a link for the first message in a channel
+pins: Pin archival system commands
+pins config: View the pin archival config
+pins channel: Set the pin archival channel
+pins archive: Archive the pins in the current channel
+pins unpin: Enable or disable the unpinning of messages during archival
+pins reset: Reset the pin archival config
+pins set: Enable or disable the pin archival system
+webhook: Set up webhooks in your server
+webhook delete: Delete webhook for a channel
+webhook send: Send message to existing channel webhook
+webhook list: List all available webhooks in the server
+webhook edit: Send message to existing channel webhook
+webhook create: Create webhook to forward messages to
+webhook unlock: Unlock your webhook from being accessed by others
+webhook lock: Lock your webhook from being accessed by others
+fakepermissions: Set up fake permissions for role through the bot!
+fakepermissions reset: Resets all fake permissions
+fakepermissions remove: Remove a fake permission from a role
+fakepermissions add: Grant a fake permission to a role
+fakepermissions list: List all fake permissions
+extractstickers: Sends all of your servers stickers in a zip file
+extractemotes: Sends all of your servers emojis in a zip file
+reposter: Manage, enable or disable social media reposting
+reposter prefix: Enable or disable bleed prefix for reposting
+reposter embed: Enable or disable embed attached to media
+reposter suppress: Enable or disable suppression of context links
+reposter strict: Enable or disable matching links throughout messages
+reposter delete: Enable or disable deletion of social media links
+suggest: Suggest a new idea or feature to server staff
+suggest unlock: Enable suggestions system
+suggest review: Enable or disable review of suggestions before displayed publicly
+suggest review channel: Set the review channel for suggestions that require approval
+suggest reactions: Set custom reactions for new suggestions
+suggest progress: Change a suggestion status to In Progress
+suggest config: View suggestion system configuration
+suggest reply: Reply to a suggestion
+suggest ignore: Prevent members or roles from creating suggestions
+suggest ignore list: List all ignored members or roles
+suggest deny: Change a suggestion status to Denied
+suggest set: Set the channel for new suggestions
+suggest threads: Create a thread along with the suggestion message
+suggest lock: Disable suggestions system
+suggest consider: Change a suggestion status to In Consideration
+suggest approve: Change a suggestion status to Approved
+suggest reset: Change a suggestion status to Pending
+customize: Customize the bot's server appearance
+customize bio: Customize the bot's server bio
+customize banner: Customize the bot's server banner
+customize avatar: Customize the bot's server avatar
+badge: Reward members for setting the guild tag
+badge role: Award members for applying the guild tag
+badge role add: Add a role to the list of roles that can be awarded for applying the guild tag
+badge role list: List all roles that can be awarded for applying the guild tag
+badge role remove: Remove a role from the list of roles that can be awarded for applying the guild tag
+badge sync: Sync guild tag member roles
+badge channel: Set an award channel for new guild tag members
+badge message: Set an award message with embed code or regular text
+badge message view: View current award message
+
+### **Moderation Commands (139)**
+tempban: Temporarily ban a member
+remind: Get reminders for a duration set about whatever you choose
+remind remove: Remove a reminder
+remind list: View a list of your reminders
+reminders: View a list of your reminders
+warn: Warns the mentioned user and private messages them the warning
+thread: Commands to manage threads and forum posts
+thread unlock: Unlock a thread or forum post
+thread add: Add a member to the thread
+thread lock: Lock a thread or forum post
+thread remove: Remove a member from the thread
+thread watch: Toggle a thread being watched for archival
+thread watch list: View all threads in the server being watched
+thread rename: Rename a thread
+lockdown: Lockdown a channel
+lockdown ignore: Blocks a channel from being altered when using the "unlock all" command
+lockdown ignore remove: Remove an ignored lockdown channel
+lockdown ignore list: View all ignored lockdown channels
+lockdown ignore add: Set an ignored lockdown channel
+lockdown all: Locks all channels
+lockdown role: Set the default lock role
+moveall: Move all members in current channel to another channel
+unlock: Unlock a channel
+unlock all: Unlocks every channel
+stripstaff: Strip staff roles from a member
+jail: Jails the mentioned user
+modstats: View punishment statistics for a moderator
+warnings: View warnings for a member
+moderationhistory: View moderation actions from a staff member
+history: View a list of every punishment recorded
+history view: View an ID's case log
+history remove: Remove a punishment from a member
+history removeall: Remove all punishments from a member
+jaillist: View a list of every current jailed member
+reason: Updates the reason on a case log
+timeout: Mutes the provided member using Discords timeout feature
+timeout list: View list of timed out members
+untimeout: Removes a timeout for a member
+mute: Mute a member
+unmute: Unmutes a member
+imute: Remove a member's attach files & embed links permission
+iunmute: Restores a member's attach files & embed links permission
+rmute: Remove a member's add reactions & use external emotes permission
+runmute: Restores a member's add reactions & use external emotes permission
+notes: View notes on a member
+notes clear: Clears all notes for a member
+notes remove: Removes a note for a member
+notes add: Add a note for a member
+hardban: Keep a member banned
+hardban list: View list of hardbanned members
+clearinvites: Remove all existing invites in guild
+drag: Drag member(s) to the specified Voice Channel
+unbanall: Unbans every member in a guild
+unbanall cancel: Cancels a unban all task running
+unban: Unbans the mentioned user
+softban: Softbans the mentioned user and deleting 1 day of messages
+ban: Bans the mentioned user
+ban purge: Set default message history purge upon ban
+ban recent: View recently banned users
+unjail: Unjails the mentioned user
+temprole: Temporarily give a role to a member
+temprole list: List all active temporary roles
+role: Modify a member's roles
+role has: Add a role to members with a specific role
+role has remove: Remove a role from members with a specific role
+role add: Adds role to a member
+role humans: Add a role to all humans
+role humans remove: Remove a role from all humans
+role delete: Deletes a role
+role mentionable: Toggle mentioning a role
+role color: Set a color for a role
+role color gradient: Set a gradient color for a role
+role cancel: Cancels a mass role task running
+role restore: Restore roles to a member
+role icon: Set an icon for a role
+role edit: Change a role name
+role bots: Add a role to all bots
+role bots remove: Remove a role from all bots
+role create: Creates a role with optional color
+role hoist: Toggle hoisting a role
+role remove: Removes role from a member
+role topcolor: Changes your highest roles color
+purge: Deletes the specified amount of messages from the current channel
+purge bots: Purge messages from bots in chat
+purge startswith: Purge messages that start with a given substring
+purge after: Purge messages after a given message ID
+purge webhooks: Purge messages from webhooks in chat
+purge between: Purge between two messages
+purge links: Purge messages containing links
+purge activity: Purge activity messages from chat
+purge humans: Purge messages from humans in chat
+purge endswith: Purge messages that ends with a given substring
+purge reactions: Purge reactions from messages in chat
+purge stickers: Purge stickers from chat
+purge mentions: Purge mentions for a member from chat
+purge emoji: Purge emojis from chat
+purge emotes: Purge emotes from chat
+purge upto: Purge messages up to a message link
+purge embeds: Purge embeds from chat
+purge files: Purge files/attachments from chat
+purge images: Purge images (including links) from chat
+purge contains: Purges messages containing given substring
+purge before: Purge messages before a given message ID
+dump: Dumps all members of a role
+nuke: Clone the current channel
+nuke view: View message after scheduled nuke for channel
+nuke add: Schedule nuke for a channel
+nuke remove: Remove scheduled nuke for a channel
+nuke list: View all scheduled nukes
+nuke archive: Automatically archive pins upon scheduled nuke
+newmembers: View list of recently joined members
+recentban: Chunk ban recently joined members
+talk: Toggle a channel to text for a role
+unhide: Unhide a channel from a role or member
+hide: Hide a channel from a role or member
+slowmode: Restricts members to sending one message per interval
+slowmode off: Disables slowmode in a channel
+slowmode on: Enable slowmode in a channel
+revokefiles: Removes/assigns the permission to attach files & embed links in the current channel
+revokefiles on: Enable permissions to attach files & embed links in a channel
+revokefiles off: Disables permissions to attach files & embed links in a channel
+setup: Start process for setting up the moderation system
+rename: Assigns the mentioned user a new nickname in the guild
+restrictcommand: Only allows people with a certain role to use command
+restrictcommand add: Allows the specified role exclusive permission to use a command
+restrictcommand remove: Removes the specified roles exclusive permission to use a command
+restrictcommand reset: Removes every restricted command
+restrictcommand list: View a list of every restricted command
+stickyrole: Reapplies a role on join
+stickyrole add: Reapplies a role on join
+stickyrole list: View a list of every sticky role
+stickyrole remove: Removes sticky role on join
+raid: Remove all members that joined in the time provided in the event of a raid
+forcenickname: Force a members current nickname
+forcenickname list: View a list of all forced nicknames
+topic: Change the current channel topic
+naughty: Temporarily make a channel NSFW for 30 seconds
+setupmute: Sets up muted roles and channel permissions
+permissions: Check permissions for member or myself
+
+### **Information Commands (80)**
+status: Get a link to the status page
+donate: Donate to the bot's hosting expenses
+sticker: Modify or add stickers to your server
+sticker tag: Add server vanity to stickers
+sticker remove: Removes sticker from server
+sticker add: Downloads sticker and adds to server
+sticker rename: Rename the attached sticker to given new name
+sticker cleanup: Cleans server sticker names
+rotate: Rotate an image by a provided degree
+compress: Compress image to lower quality
+invert: Invert an image's colors
+emoji: Returns a large emoji or server emote
+emoji removeduplicates: Remove duplicates of emotes
+emoji add: Downloads emote and adds to server
+emoji rename: Renames emote to the new name provided
+emoji stats: Show top ten most used emotes
+emoji information: View the most recent emote used
+emoji addmany: Bulk add emotes to the current server
+emoji remove: Removes emote from server
+emoji removemany: Bulk remove emotes from the current server
+osu: Retrieve simple OSU! profile information
+define: Get definition of a word
+urbandictionary: Gets the definition of a word/slang from Urban Dictionary
+inviteinfo: View basic invite code information
+boosters: View all recent server boosters
+boosters lost: View list of most recent lost boosters
+roles: View all roles in the server
+emotes: View all emotes in the server
+hex: Grab the most dominant color from an image
+bots: View all bots in the server
+telegram: Gets profile information on the given Telegram user or group
+screenshot: Get an image of a website
+members: View members in a role
+highlight: Set notifications for when a keyword is said
+highlight add: Add a highlighted keyword
+highlight list: List all keywords set in a server
+highlight remove: Remove a highlighted keyword
+highlight ignore: Ignore notifications from members or a channel or a role
+highlight ignore list: List all ignored members, channel & roles
+highlight reset: Reset your highlighted keywords in the current server
+seen: Seen when a member was last seen in the server
+membercount: View server member count
+roleinfo: View information about a role
+channelinfo: View information about a channel
+avatar: Get avatar of a member or yourself
+serveravatar: Get the server avatar of a member or yourself
+serverbanner: Get the server banner of a member or yourself
+banner: Get the banner of a member or yourself
+guildicon: Returns guild icon
+guildbanner: Returns banner icon
+splash: Returns splash background
+serverinfo: View information about a server
+userinfo: View information about a member or yourself
+weather: Gets simple weather from OpenWeatherMap
+birthday: View your birthday or somebody elses
+lock: Lock the birthday system
+birthday celebrate: Limit birthday celebration to members in certain roles
+birthday celebrate list: List celebrated roles
+birthday unlock: Unlock the birthday system
+birthday config: Set the birthday role
+birthday set: Set your birthday
+birthday channel: Set the birthday channel
+birthday role: Set the birthday role
+birthday list: View a list of every member's birthday
+timezone: View your current time or somebody elses
+timezone list: View a list of every member's timezone
+timezone set: Set your timezone
+steam: Get information about a steam profile
+github: Gets profile information on the given Github user
+roblox: Gets profile information on the given Roblox user
+roblox todiscord: Get Discord account from Roblox account
+roblox fromdiscord: Get Roblox account from Discord account
+roblox outfits: View all outfits for a user
+roblox template: Download asset for an item
+cashapp: Retrieve simple CashApp profile information
+xbox: Gets profile information on the given Xbox gamertag
+snapchatstory: Gets all current stories for the given Snapchat user
+snapchat: Get bitmoji and QR scan code for user
+valorant: Get valorant player information
+minecraft: Gets minecraft profile information
+
+### **Roleplay Commands (63)**
+roleplay: Roleplay commands are enabled by default and must be enabled by admins to use.
+airkiss: Airkiss someone.
+angrystare: Stare angrily at someone.
+bite: Bite someone.
+bleh: Bleh at someone.
+brofist: Bro fist someone.
+celebrate: Celebrate with someone.
+cheers: Cheer with someone.
+clap: Clap at someone.
+confused: Act confused at someone.
+cool: Cool with someone.
+cry: Cry at someone.
+cuddle: Cuddle someone.
+dance: Dance with someone.
+drool: Drool on someone.
+evillaugh: Laugh evilly at someone.
+facepalm: Facepalm at someone.
+handhold: Hold hands with someone.
+happy: Be happy with someone.
+headbang: Headbang into someone.
+hug: Hug someone.
+kiss: Kiss someone.
+laugh: Laugh with someone.
+lick: Lick someone.
+love: Love someone.
+mad: Get mad at someone.
+nervous: Get nervous around someone.
+nom: Nibble someone.
+nuzzle: Nuzzle someone.
+nyah: Nyahhh
+pat: Pat someone.
+peek: Peek at someone.
+pinch: Pinch someone.
+poke: Poke someone.
+pout: Pout at someone.
+punch: Punch someone.
+sad: Is sad because of...
+scared: Get scared of someone.
+shout: Shout at someone.
+shrug: Shrug at someone.
+shy: Get shy around someone.
+sigh: Sigh at someone.
+sip: Sip something with someone.
+slap: Slap someone.
+sleep: Sleep with someone.
+slowclap: Slow clap at someone.
+smack: Smack someone.
+smile: Smile at someone.
+smug: Smug at someone.
+sneeze: Sneeze on someone.
+sorry: Be sorry to someone.
+stare: Stare at someone.
+surprised: Act surprised at someone.
+sweat: Sweat around someone.
+thumbsup: Give a thumbs up to someone.
+tickle: Tickle someone.
+tired: Get tired around someone.
+wave: Wave at someone.
+wink: Wink at someone.
+woah: Gasps at someone.
+yawn: Yawn at someone.
+yay: Get excited around someone.
+yes: Say yes to someone.
+
+### **Miscellaneous Commands (51)**
+embed: Manage and create new embeds easily
+embed create: Start customization for an embed
+embed list: List all available embeds
+embed copy: Copy an existing embeds code for creating an embed
+embed delete: Delete a stored embed
+embed preview: Send an existing embed
+discog: Integrate your Discogs experience with bleed
+discog wantlist: View your Discogs want list
+discog profile: View a user's Discogs profile
+discog search: Search for a query in Discog's database
+discog logout: Remove your Discogs account
+discog login: Login and authenticate bleed
+discog collections: View your Discogs collection
+chatgpt: Ask a question using the ChatGPT API
+uwu: Uwuify text
+freaky: Freakify text
+quickpoll: Add up/down arrow to message initiating a poll
+fyp: Get a random TikTok video
+afk: Set an AFK status
+afk mentions: Show mentions received while AFK
+transcribe: Transcribe text by providing video or audio
+poll: Create a short poll
+editembed: Edit an embed you created
+run: Run code in a containerized environment
+createembed: Create your own embed
+embedcode: Copy an existing embeds code
+randomhex: Generate a random hex (color)
+charinfo: Get information about a character/symbol
+color: Show a hex codes color in a embed
+addemote: Downloads emote and adds to server
+rps: Play Rock-paper-scissors with me!
+choose: Give me choices and I will pick for you
+jumbo: Returns a large version of an emoji
+wouldyourather: Would you rather?
+help: View extended help for commands
+invites: View all active invites
+makemp3: Convert a video to an audio file
+wikihow: How to...?
+gnames: View guild name changes
+clearnames: Reset your name history
+cleargnames: Reset your guild's name history
+brainly: Get answer for brainly result
+names: View username and nickname history
+shazam: Find a song by providing video or audio
+topcommands: View the most used commands
+nba: View current status & score of NBA games
+nfl: View current status & score of NFL games
+mlb: View current status & score of MLB games
+soccer: View current status & score of Soccer games
+futbol: View current status & score of football games
+nhl: View current status & score of hockey games
+
+### **Fun Commands (50)**
+lyrics: Gets lyrics for the given song
+duckduckgo: Search the DuckDuckGo search engine
+blacktea: Find a word with 3 letters!
+blacktea end: Ends the game session
+quote: Quote a message
+tictactoe: Play tic-tac-toe with somebody!
+tictactoe statistics: View tic-tac-toe statistics
+tictactoe leaderboard: View the most tic-tac-toe wins
+google: Search the largest search engine on the internet
+giphy: Search Giphy for gif results
+tenor: Search Tenor for gif results
+steal: View the most recent emote used
+duckduckgoimage: Search duckduckgo for an image
+reverseimage: Reverse Images on Google
+image: Search Google for an image
+book: Shows information of a book from Goodreads
+manga: Search MyAnimeList for manga information
+anime: Search MyAnimeList for anime information
+character: Search MyAnimeList for character information
+tone: Run Google Perspective on text
+tags: Manage and create tags
+tags remove: Remove a tag from guild
+tags add: Add a tag to guild
+tags author: View the author of a tag
+tags list: View a list of every tag in guild
+tags edit: Edit the contents of your tag
+tags random: Return a random tag
+tags rename: Rename your tags name
+tags reset: Reset every tag for this guild
+tags search: Search for tags containing a keyword
+tvshow: Returns information about the specified TV show
+game: Returns information about the specified game title
+movie: Returns information about the specified movie title
+movie expand: Returns more information on a movie
+ocr: Detects text in an image
+ocrtr: Detects text in an image and translates
+translate: Translate text from or to any language
+tts: Sends a .mp3 file of text speech
+tts channel: Speak in a voice chat with text-to-speech
+lego: Legofy an image
+makegif: Convert videos into a GIF
+transparent: Remove background from an image
+wolfram: Gets basic information about a query
+juul: Share a juul with your friends!
+juul flavor: Change the servers juul's flavor
+juul toggle: Toggle the servers juul on or off
+juul hit: Hit the servers juul
+juul stats: Show the servers juul stats
+juul steal: Steal the servers juul
+juul pass: Pass the servers juul to someone else
+
+### **Manipulation Commands (36)**
+media: Image manipulation for photos, videos and GIFs
+media deepfry: Apply a deepfried filter to a photo
+media gifmagik: Create a gif of the magik filter
+media valentine: Use your photo in a valentines gif
+media speed: Change the speed of a video
+media meme: Create a top and bottom text meme
+media book: Put your photo in a book
+media speechbubble: Create a quotation meme using a photo
+media billboard: Put your photo on a billboard
+media caption: Create your own caption meme
+media heart: Create a heart gif
+media magik: Apply the Magik filter to a photo
+media rubiks: Put your image onto a rubiks cube
+media tattoo: Tattoo your photo onto a body
+media grayscale: Apply a greyscale filter to a photo
+media toaster: Generate your image on a toaster GIF
+media rainbow: Apply an animated rainbow color effect
+media spread: Apply a paint spread filter to a photo
+media swirl: Apply a swirl filter to a photo
+media pixelate: Pixelate a given image
+media fortune: Put a given image inside a fortune cookie
+media blur: Blur an image
+media neon: Create a neon effect
+media scramble: Randomise frames within the given media
+media motivate: Create a motivation meme
+media invert: Invert an image's colours
+media flag: Put a selected image onto a flag GIF
+media zoom: Create a zooming gif
+media bloom: Apply a bloom effect to an image
+media fisheye: Apply a fisheye filter onto a photo
+media zoomblur: Apply a zoom blur effect
+media flag2: Put a selected image onto a flag GIF
+media spin: Create a gif of your selected photo rotating
+media wormhole: Create a wormhole animation
+media circuitboard: Put your picture on a circuitboard GIF
+media reverse: Reverse the playback of a video
+
+### **Voicemaster Commands (29)**
+voicemaster: Make temporary voice channels in your server!
+voicemaster reset: Reset server configuration for VoiceMaster
+voicemaster ghost: Hide your voice channel
+voicemaster claim: Claim an inactive voice channel
+voicemaster lock: Lock your voice channel
+voicemaster unghost: Unhide your voice channel
+voicemaster unlock: Unlock your voice channel
+voicemaster role: Grant roles to members who join
+voicemaster music: Change your channel to a Music Only channel
+voicemaster name: Rename your voice channel
+voicemaster limit: Set a member limit to your voice channel
+voicemaster status: Set a status for your voice channel
+voicemaster transfer: Transfer ownership of your channel
+voicemaster bitrate: Edit bitrate of your voice channel
+voicemaster join: Configure the member join settings
+voicemaster join role: Set a role that members get in a VM channel
+voicemaster permit: Permit a member or role to join your VC
+voicemaster reject: Reject a member or role from joining your VC
+voicemaster configuration: See current configuration for current Voice Channel
+voicemaster category: Redirect voice channels to custom category
+voicemaster category private: Set the private category for VM
+voicemaster setup: Begin VoiceMaster server configuration setup
+voicemaster default: Configure the default settings for VM channels
+voicemaster default bitrate: Edit default bitrate for new channels
+voicemaster default role: Set the default role for permissions
+voicemaster default name: Set default name for new channels
+voicemaster default region: Edit default region for new channels
+voicemaster default interface: Send interface to new voice channels
+voicemaster sendinterface: Forcefully resend VoiceMaster interface
+
+### **Music Commands (28)**
+queue: View all tracks queued
+queue remove: Remove a track from the queue
+queue empty: Empty the queue
+queue move: Move a track to a different position
+queue shuffle: Shuffle the queue
+play: Queue a track
+fastforward: Fast forward to a desired position
+rewind: Rewind to a desired position
+volume: Change the volume
+pause: Pause the current track
+resume: Resume the current track
+skip: Skip to the next track
+shuffle: Shuffle the queue
+repeat: Change the current loop mode
+preset: Use a preset for Music
+preset nightcore: Accelerates track playback for nightcore-style music
+preset vaporwave: Slows track playback for vintage effect
+preset karaoke: Filters out vocals from the track
+preset flat: Represents a neutral EQ setting
+preset active: List all currently applied filters
+preset chipmunk: Accelerates track playback to produce high pitch
+preset soft: Cuts high and mid frequencies
+preset boost: Enhances track with heightened bass and highs
+preset vibrato: Introduces a wavering pitch effect
+preset 8d: Immersive 8D audio effect
+preset piano: Enhances mid and high tones for piano
+preset metal: Amplifies midrange for metal tracks
+disconnect: Disconnect and stop playing music
+
+### **Levels Commands (24)**
+levels: View your level and experience
+levels roles: View all XP roles
+levels leaderboard: View the highest ranking members
+levels leaderboard rename: Set the title of the leaderboard embeds
+levels setrate: Set multiplier for XP gain
+levels unlock: Enable leveling system
+levels list: View all ignored channels and roles
+levels messagemode: Set up where level up messages will be sent
+levels cleanup: Reset level & XP for absent members
+levels update: Update a level roles rank
+levels messages: Toggle level up messages for yourself
+levels add: Create level role
+levels sync: Update your members level roles
+levels reset: Reset all members level and XP
+levels remove: Remove level role
+levels message: Set custom level up message
+levels message view: View the level up message
+levels ignore: Ignore a channel or role for XP
+levels config: View server configuration for Leveling system
+levels lock: Disable leveling system
+levels stackroles: Enable or disable stacking of roles
+setxp: Set a user's experience
+removexp: Remove experience from a user
+setlevel: Set a user's level
+
+### **Reaction Commands (24)**
+reaction: Add a reaction(s) to a message
+reaction delete: Removes a reaction trigger in guild
+reaction clear: Removes every reaction trigger in guild
+reaction deleteall: Removes every reaction trigger for a specific word
+reaction add: Adds a reaction trigger to guild
+reaction list: View a list of every reaction trigger
+reaction messages: Add or remove auto reaction on messages
+reaction messages list: List auto reactions for all channels
+reaction owner: Gets the author of a trigger word
+previousreact: No description given
+previousreact deleteall: Removes every reaction trigger for a specific word
+previousreact delete: Removes a previous reaction trigger in guild
+previousreact list: View a list of every previous reaction trigger
+previousreact owner: Gets the author of a previous reaction trigger
+previousreact clear: Removes every previous reaction trigger in guild
+previousreact add: Adds a reaction trigger to guild
+noselfreact: Prevent self reactions on messages
+noselfreact toggle: Toggle self-react monitoring
+noselfreact bypass: Allow staff to bypass self-react monitoring
+noselfreact exempt: Exempt a member, channnel or role
+noselfreact exempt list: View all exempted members, channels and roles
+noselfreact emoji: Add or remove emoji from self-react monitoring
+noselfreact emoji list: View list of monitored self-react emojis
+noselfreact punishment: Set the default punishment for self-reacts
+
+### **Giveaways Commands (21)**
+giveaways: Start a giveaway quickly and easily
+giveaways end: End an active giveaway early
+giveaways reroll: Reroll a winner for the specified giveaway
+giveaways cancel: Delete a giveaway without picking any winners
+giveaways list: List every active giveaway in the server
+giveaways edit: Edit options and limits for a specific giveaway
+giveaways edit prize: Change prize for a giveaway
+giveaways edit minlevel: Set the minimum level requirement
+giveaways edit winners: Change the amount of winners
+giveaways edit image: Change image for a giveaway embed
+giveaways edit requiredroles: Set required roles for entry
+giveaways edit roles: Award winners specific roles
+giveaways edit age: Set minimum account age for entry
+giveaways edit thumbnail: Change thumbnail for a giveaway embed
+giveaways edit description: Change description for a giveaway
+giveaways edit stay: Set minimum server stay for entry
+giveaways edit maxlevel: Set the maximum level requirement
+giveaways edit host: Set new hosts for a giveaway
+giveaways edit color: Change color for a giveaway embed
+giveaways edit duration: Change the end date for a giveaway
+giveaways start: Start a giveaway with provided parameters
+
+### **Autorole & Reaction Role Commands (17)**
+autorole: Set up automatic role assign on member join
+autorole remove: Removes a autorole and stops assigning on join
+autorole list: View a list of every auto role
+autorole add: Adds a autorole and assigns on join to member
+autorole reset: Clears every autorole for guild
+buttonrole: Set up self-assignable roles with buttons
+buttonrole remove: Remove a button role from a message
+buttonrole list: View a list of every button role
+buttonrole reset: Clears every button role from guild
+buttonrole add: Add a button role to a message
+buttonrole removeall: Removes all button roles from a message
+reactionrole: Set up self-assignable roles with reactions
+reactionrole remove: Removes a reaction role from a message
+reactionrole removeall: Removes all reaction roles from a message
+reactionrole list: View a list of every reaction role
+reactionrole add: Adds a reaction role to a message
+reactionrole reset: Clears every reaction role from guild
+
+### **Antinuke Commands (15)**
+antinuke: Antinuke to protect your server
+antinuke whitelist: Whitelist a member or bot
+antinuke role: Prevent mass role delete
+antinuke kick: Prevent mass member kick
+antinuke config: View server configuration for Antinuke
+antinuke webhook: Prevent mass webhook creation
+antinuke channel: Prevent mass channel create and delete
+antinuke vanity: Punish users that change the server vanity
+antinuke admins: View all antinuke admins
+antinuke admin: Give user permissions to edit antinuke settings
+antinuke emoji: Prevent mass emoji delete
+antinuke botadd: Prevent new bot additions
+antinuke permissions: Watch dangerous permissions being granted
+antinuke list: View all enabled modules and whitelists
+antinuke ban: Prevent mass member ban
+
+### **Clownboard Commands (15)**
+clownboard: Showcase the worst messages in your server
+clownboard ignore: Ignore a channel, member or role
+clownboard ignore list: View ignored items for Clownboard
+clownboard color: Set default color for clownboard posts
+clownboard reset: Resets guild's configuration for clownboard
+clownboard set: Sets the channel where messages will be sent
+clownboard unlock: Enables/unlocks clownboard
+clownboard jumpurl: Allow the jump URL to appear on posts
+clownboard emoji: Sets the emoji that triggers the clownboard
+clownboard attachments: Allow attachments to appear on posts
+clownboard lock: Disables/locks clownboard
+clownboard threshold: Sets the default amount of stars needed
+clownboard timestamp: Allow a timestamp to appear on posts
+clownboard config: View the settings for clownboard in guild
+clownboard selfstar: Allow a author to star their own message
+
+### **Starboard Commands (15)**
+starboard: Showcase the best messages in your server
+starboard unlock: Enables/unlocks starboard
+starboard lock: Disables/locks starboard
+starboard selfstar: Allow an author to star their own message
+starboard emoji: Sets the emoji that triggers the starboard
+starboard color: Set default color for starboard posts
+starboard jumpurl: Allow the jump URL to appear on a Starboard post
+starboard threshold: Sets the default amount stars needed
+starboard timestamp: Allow a timestamp to appear on a Starboard post
+starboard ignore: Ignore a channel, members or roles
+starboard ignore list: View ignored members and channels
+starboard reset: Resets guild's configuration for starboard
+starboard config: View the settings for starboard in guild
+starboard attachments: Allow attachments to appear on posts
+starboard set: Sets the conduit channel for starboard
+
+### **Bump Reminder Commands (9)**
+bumpreminder: Get reminders to /bump your server on Disboard!
+bumpreminder thankyou: Set the 'Thank You' message
+bumpreminder thankyou view: View the current Thank You message
+bumpreminder message: Set the reminder message to run /bump
+bumpreminder message view: View the current remind message
+bumpreminder autolock: Lock channel until ready to use /bump
+bumpreminder config: View server configuration for Bump Reminder
+bumpreminder channel: Set Bump Reminder channel for the server
+bumpreminder autoclean: Automatically delete non-bump messages
+
+### **Antiraid Commands (8)**
+antiraid: Configure protection against potential raids
+antiraid massjoin: Protect server against mass bot raids
+antiraid state: Turn off server's raid state
+antiraid avatar: Punish accounts without a profile picture
+antiraid newaccounts: Punish new registered accounts
+antiraid config: View server antiraid configuration
+antiraid whitelist: Create a one-time whitelist for a user
+antiraid whitelist view: View all current antinuke whitelists
+
+### **Logging Commands (7)**
+log: Set up logging for your community
+log add: Set up logging in a channel
+log color: Customize embed color for an event
+log color list: List embed color customization for events
+log ignore: Ignore a member or channel from being logged
+log ignore list: View all ignored members and channels
+log remove: Remove events from a logging channel
+
+### **Kick Commands (6)**
+kick: Kicks the mentioned user from the guild
+kick add: Add stream notifications to channel
+kick remove: Remove stream notifications from a channel
+kick list: View all Kick stream notifications
+kick message: Set a message for Kick notifications
+kick message view: View Kick message for new streams
+
+### **Timer Commands (6)**
+timer: Post repeating messages in your server
+timer view: Preview a channel's auto message
+timer remove: Remove repeating message from a channel
+timer add: Add repeating message to a channel
+timer list: View all auto messages in your server
+timer activity: Enable or disable channel activity requirement
+
+### **Snipe Commands (5)**
+clearsnipe: Clear all results for reactions, edits and messages
+reactionhistory: See logged reactions for a message
+reactionsnipe: Snipe the latest reaction that was removed
+editsnipe: Snipe the latest message that was edited
+snipe: Snipe the latest message that was deleted
+
+### **Crypto Commands (4)**
+crypto: Checks the current price of the specified cryptocurrency
+subscribe: Subscribe to a bitcoin transaction for one confirmation
+transaction: Get information about a BTC, LTC or ETH transaction
+gas: View the current gas prices
+
+### **Counter Commands (4)**
+counter: Create counters for everybody to see
+counter remove: Remove a channel counter
+counter list: List every counter available in this server
+counter add: Create channel counter
