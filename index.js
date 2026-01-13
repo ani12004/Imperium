@@ -35,6 +35,7 @@ const client = new Client({
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildPresences,
     GatewayIntentBits.DirectMessages,
+    GatewayIntentBits.GuildVoiceStates, // ADDED: Required for VoiceMaster
   ],
   partials: [Partials.Channel],
 });
