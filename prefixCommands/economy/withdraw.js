@@ -1,6 +1,7 @@
 import { EmbedBuilder } from "discord.js";
 import { getEconomy, updateEconomy } from "../../utils/database.js";
 import { checkRules } from "../../utils/checkRules.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "withdraw",
@@ -21,11 +22,11 @@ export default {
         }
 
         if (isNaN(amount) || amount <= 0) {
-            return message.reply("❌ Please provide a valid amount.");
+            return message.reply(`${emojis.ERROR} Please provide a valid amount.`);
         }
 
         if (user.bank < amount) {
-            return message.reply("❌ You don't have enough money in your bank.");
+            return message.reply(`${emojis.ERROR} You don't have enough money in your bank.`);
         }
 
         updateEconomy(message.author.id, {
@@ -35,7 +36,8 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor("Green")
-            .setDescription(`💸 You withdrew **$${amount}** from your bank.`);
+            .setColor("Green")
+            .setDescription(`${emojis.WALLET} You withdrew **${emojis.COIN}${amount}** from your bank.`);
 
         message.channel.send({ embeds: [embed] });
     },

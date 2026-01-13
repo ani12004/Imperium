@@ -1,6 +1,7 @@
 import { EmbedBuilder } from "discord.js";
 import { getEconomy, updateEconomy } from "../../utils/database.js";
 import { checkRules } from "../../utils/checkRules.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "work",
@@ -17,7 +18,7 @@ export default {
         if (now - user.last_work < cooldown) {
             const remaining = cooldown - (now - user.last_work);
             const minutes = Math.ceil(remaining / 60000);
-            return message.reply(`⏳ You can work again in **${minutes} minutes**.`);
+            return message.reply(`${emojis.LOADING} You can work again in **${minutes} minutes**.`);
         }
 
         const earnings = Math.floor(Math.random() * 500) + 100;
@@ -32,7 +33,7 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor("Green")
-            .setDescription(`👷 You worked as a **${job}** and earned **$${earnings}**!`);
+            .setDescription(`👷 You worked as a **${job}** and earned **${emojis.COIN}${earnings}**!`);
 
         message.channel.send({ embeds: [embed] });
     },

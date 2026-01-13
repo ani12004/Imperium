@@ -1,4 +1,5 @@
 import { EmbedBuilder } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "twitter",
@@ -9,10 +10,10 @@ export default {
         const action = args[0];
 
         if (action === "login") {
-            return message.reply("✅ Logged in to Twitter as **" + message.author.username + "**.");
+            return message.reply(`${emojis.SUCCESS} Logged in to Twitter as **` + message.author.username + "**.");
         } else if (action === "post") {
             const content = args.slice(1).join(" ");
-            if (!content) return message.reply("❌ Provide text to post.");
+            if (!content) return message.reply(`${emojis.ERROR} Provide text to post.`);
 
             const embed = new EmbedBuilder()
                 .setColor("#1DA1F2")
@@ -23,7 +24,7 @@ export default {
 
             return message.channel.send({ embeds: [embed] });
         } else {
-            return message.reply("❌ Usage: ,twitter login | post [text]");
+            return message.reply(`${emojis.ERROR} Usage: ,twitter login | post [text]`);
         }
     },
 };

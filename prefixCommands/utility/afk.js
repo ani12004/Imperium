@@ -1,5 +1,6 @@
 import { EmbedBuilder } from "discord.js";
 import db, { updateUser } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "afk",
@@ -48,7 +49,7 @@ export default {
 
         } catch (error) {
             console.error("AFK Error:", error);
-            message.channel.send("❌ Failed to set AFK status.");
+            message.channel.send(`${emojis.ERROR} Failed to set AFK status.`);
         }
     }
 };

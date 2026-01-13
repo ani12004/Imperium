@@ -1,4 +1,5 @@
 import { EmbedBuilder } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "spotify",
@@ -10,7 +11,7 @@ export default {
 
         if (action === "play") {
             const song = args.slice(1).join(" ");
-            if (!song) return message.reply("❌ Provide a song name.");
+            if (!song) return message.reply(`${emojis.ERROR} Provide a song name.`);
 
             const embed = new EmbedBuilder()
                 .setColor("#1DB954")
@@ -20,7 +21,7 @@ export default {
 
             return message.channel.send({ embeds: [embed] });
         } else {
-            return message.reply("❌ Usage: ,spotify play [song]");
+            return message.reply(`${emojis.ERROR} Usage: ,spotify play [song]`);
         }
     },
 };

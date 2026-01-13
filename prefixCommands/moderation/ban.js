@@ -1,4 +1,5 @@
 import { PermissionsBitField, EmbedBuilder } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
   name: "ban",
@@ -10,14 +11,14 @@ export default {
     const target = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(() => null);
     const reason = args.slice(1).join(" ") || "No reason provided";
 
-    if (!target) return message.reply("❌ Please mention a user or provide a valid ID.");
-    if (!target.bannable) return message.reply("❌ I cannot ban this user. They might have higher roles than me.");
+    if (!target) return message.reply(`${emojis.ERROR} Please mention a user or provide a valid ID.`);
+    if (!target.bannable) return message.reply(`${emojis.ERROR} I cannot ban this user. They might have higher roles than me.`);
 
     await target.ban({ reason });
 
     const embed = new EmbedBuilder()
       .setColor("#FFB6C1")
-      .setTitle("🌸 User Banned")
+      .setTitle(`${emojis.BAN} User Banned`)
       .setDescription(`**${target.user.tag}** has been banned.`)
       .addFields({ name: "Reason", value: reason })
       .setTimestamp();

@@ -6,8 +6,12 @@ export default {
     description: "Shows the top ranked users.",
     aliases: ["xpboard"],
     async execute(message, args) {
-        const stmt = db.prepare("SELECT user_id, level, xp FROM users WHERE guild_id = ? ORDER BY xp DESC LIMIT 10");
-        const topUsers = stmt.all(message.guild.id);
+        const { data: topUsers } = await db
+            .from('users')
+            .select('user_id, level, xp')
+            .eq('guild_id', message.guild.id)
+            .order('xp', { ascending: false })
+            .limit(10);
 
         if (!topUsers.length) return message.reply("No data found.");
 

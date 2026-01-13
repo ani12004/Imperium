@@ -1,6 +1,7 @@
 import { EmbedBuilder } from "discord.js";
 import { getEconomy } from "../../utils/database.js";
 import { checkRules } from "../../utils/checkRules.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "balance",
@@ -16,8 +17,8 @@ export default {
             .setColor("Gold")
             .setTitle(`${target.username}'s Balance`)
             .addFields(
-                { name: "💵 Wallet", value: `${user.balance}`, inline: true },
-                { name: "🏦 Bank", value: `${user.bank}`, inline: true }
+                { name: `${emojis.WALLET} Wallet`, value: `${emojis.COIN} ${user.balance}`, inline: true },
+                { name: `${emojis.BANK} Bank`, value: `${emojis.COIN} ${user.bank}`, inline: true }
             );
 
         message.channel.send({ embeds: [embed] });

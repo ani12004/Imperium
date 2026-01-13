@@ -1,4 +1,5 @@
 import { getAudioUrl } from 'google-tts-api';
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "tts",
@@ -7,9 +8,9 @@ export default {
     aliases: ["say"],
     async execute(message, args) {
         const text = args.join(" ");
-        if (!text) return message.reply("❌ Provide text to say.");
+        if (!text) return message.reply(`${emojis.ERROR} Provide text to say.`);
 
-        if (text.length > 200) return message.reply("❌ Text too long (max 200 chars).");
+        if (text.length > 200) return message.reply(`${emojis.ERROR} Text too long (max 200 chars).`);
 
         const url = getAudioUrl(text, {
             lang: 'en',

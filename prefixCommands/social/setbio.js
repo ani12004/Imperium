@@ -1,5 +1,6 @@
 import { EmbedBuilder } from "discord.js";
 import { updateEconomy } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "setbio",
@@ -8,13 +9,13 @@ export default {
         const bio = args.join(" ");
         if (!bio) return message.reply("Usage: `s?setbio <text>`");
 
-        if (bio.length > 200) return message.reply("❌ Bio is too long (max 200 chars).");
+        if (bio.length > 200) return message.reply(`${emojis.ERROR} Bio is too long (max 200 chars).`);
 
         updateEconomy(message.author.id, { bio: bio });
 
         const embed = new EmbedBuilder()
             .setColor("Green")
-            .setDescription("✅ **Bio updated!** Check it with `s?profile`.");
+            .setDescription(`${emojis.SUCCESS} **Bio updated!** Check it with \`s?profile\`.`);
 
         message.channel.send({ embeds: [embed] });
     },

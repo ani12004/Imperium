@@ -7,8 +7,12 @@ export default {
     permissions: [],
     aliases: ["lb", "top"],
     async execute(message, args) {
-        const stmt = db.prepare('SELECT * FROM users WHERE guild_id = ? ORDER BY xp DESC LIMIT 10');
-        const topUsers = stmt.all(message.guild.id);
+        const { data: topUsers } = await db
+            .from('users')
+            .select('*')
+            .eq('guild_id', message.guild.id)
+            .order('xp', { ascending: false })
+            .limit(10);
 
         if (topUsers.length === 0) return message.reply("❌ No data found.");
 

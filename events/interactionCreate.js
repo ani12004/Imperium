@@ -1,5 +1,6 @@
 import { Events, ChannelType, PermissionsBitField, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ModalBuilder, TextInputBuilder, TextInputStyle, ChannelSelectMenuBuilder } from 'discord.js';
 import db from '../utils/database.js';
+import emojis from '../utils/emojis.js';
 
 export default {
   name: Events.InteractionCreate,
@@ -27,9 +28,14 @@ export default {
       const { customId, guild, user } = interaction;
 
       // --- Create Ticket ---
+      // --- Create Ticket ---
       if (customId === 'create_ticket') {
         // Check if user already has an open ticket
-        const existingTicket = db.prepare('SELECT * FROM tickets WHERE user_id = ? AND guild_id = ? AND closed = 0').get(user.id, guild.id);
+        const { data: existingTicket } = await db
+          .from('tickets')
+          .select('*')
+          .match({ user_id: user.id, guild_id: guild.id, closed: 0 })
+          .single();
 
         if (existingTicket) {
           // Check if channel still exists
@@ -38,7 +44,7 @@ export default {
             return interaction.reply({ content: `You already have an open ticket: ${channel}`, ephemeral: true });
           } else {
             // Clean up ghost ticket from DB if channel was manually deleted
-            db.prepare('UPDATE tickets SET closed = 1 WHERE ticket_id = ?').run(existingTicket.ticket_id);
+            await db.from('tickets').update({ closed: 1 }).eq('ticket_id', existingTicket.ticket_id);
           }
         }
 
@@ -65,7 +71,12 @@ export default {
 
           // Add to DB
           const ticketId = `${guild.id}-${user.id}-${Date.now()}`;
-          db.prepare('INSERT INTO tickets (ticket_id, guild_id, user_id, channel_id) VALUES (?, ?, ?, ?)').run(ticketId, guild.id, user.id, channel.id);
+          await db.from('tickets').insert({
+            ticket_id: ticketId,
+            guild_id: guild.id,
+            user_id: user.id,
+            channel_id: channel.id
+          });
 
           // Send Welcome Message
           const embed = new EmbedBuilder()
@@ -77,13 +88,13 @@ export default {
             .setCustomId('close_ticket')
             .setLabel('Close Ticket')
             .setStyle(ButtonStyle.Danger)
-            .setEmoji('🔒');
+            .setEmoji(emojis.LOCK);
 
           const row = new ActionRowBuilder().addComponents(closeButton);
 
           await channel.send({ content: `${user}`, embeds: [embed], components: [row] });
 
-          await interaction.reply({ content: `✅ Ticket created: ${channel}`, ephemeral: true });
+          await interaction.reply({ content: `${emojis.SUCCESS} Ticket created: ${channel}`, ephemeral: true });
 
         } catch (error) {
           console.error(error);
@@ -95,15 +106,20 @@ export default {
       // --- Close Ticket ---
       if (customId === 'close_ticket') {
         // Check if it is a ticket channel
-        const ticket = db.prepare('SELECT * FROM tickets WHERE channel_id = ?').get(interaction.channelId);
+        const { data: ticket } = await db
+          .from('tickets')
+          .select('*')
+          .eq('channel_id', interaction.channelId)
+          .single();
+
         if (!ticket) {
           return interaction.reply({ content: 'This is not a valid ticket channel or it is not in the database.', ephemeral: true });
         }
 
-        await interaction.reply('🔒 Closing ticket in 5 seconds...');
+        await interaction.reply(`${emojis.LOCK} Closing ticket in 5 seconds...`);
 
         // Update DB
-        db.prepare('UPDATE tickets SET closed = 1 WHERE ticket_id = ?').run(ticket.ticket_id);
+        await db.from('tickets').update({ closed: 1 }).eq('ticket_id', ticket.ticket_id);
 
         setTimeout(() => {
           interaction.channel.delete().catch(() => { });
@@ -128,7 +144,7 @@ export default {
         } else if (value === 'ticket_setup') {
           const row = new ActionRowBuilder()
             .addComponents(
-              new ButtonBuilder().setCustomId('send_ticket_panel').setLabel('Send Panel Here').setStyle(ButtonStyle.Success).setEmoji('📩')
+              new ButtonBuilder().setCustomId('send_ticket_panel').setLabel('Send Panel Here').setStyle(ButtonStyle.Success).setEmoji(emojis.TICKET)
             );
           await interaction.reply({ content: 'Click below to send the Ticket Panel to this channel:', components: [row], ephemeral: true });
 
@@ -181,7 +197,7 @@ export default {
           await interaction.followUp({ content: `✅ **${template}** server setup complete!`, ephemeral: true });
         } catch (error) {
           console.error(error);
-          await interaction.followUp({ content: '❌ Failed to create channels. Check my permissions!', ephemeral: true });
+          await interaction.followUp({ content: `${emojis.ERROR} Failed to create channels. Check my permissions!`, ephemeral: true });
         }
       }
       return;
@@ -260,11 +276,11 @@ export default {
         const { updateEconomy } = await import('../utils/database.js');
         updateEconomy(interaction.user.id, { rules_accepted: 1 });
 
-        await interaction.reply({ content: '✅ **Rules Accepted!** You can now use economy commands.', ephemeral: true });
+        await interaction.reply({ content: `${emojis.SUCCESS} **Rules Accepted!** You can now use economy commands.`, ephemeral: true });
 
         // Disable the button on the original message
         const disabledRow = new ActionRowBuilder().addComponents(
-          new ButtonBuilder().setCustomId('accept_rules_btn').setLabel('Rules Accepted').setStyle(ButtonStyle.Success).setEmoji('✅').setDisabled(true)
+          new ButtonBuilder().setCustomId('accept_rules_btn').setLabel('Rules Accepted').setStyle(ButtonStyle.Success).setEmoji(emojis.SUCCESS).setDisabled(true)
         );
         await interaction.message.edit({ components: [disabledRow] });
         return;
@@ -279,11 +295,11 @@ export default {
           .setFooter({ text: 'Support System' });
 
         const row = new ActionRowBuilder().addComponents(
-          new ButtonBuilder().setCustomId('create_ticket').setLabel('Create Ticket').setStyle(ButtonStyle.Primary).setEmoji('📩')
+          new ButtonBuilder().setCustomId('create_ticket').setLabel('Create Ticket').setStyle(ButtonStyle.Primary).setEmoji(emojis.TICKET)
         );
 
         await interaction.channel.send({ embeds: [embed], components: [row] });
-        await interaction.reply({ content: '✅ Ticket panel sent!', ephemeral: true });
+        await interaction.reply({ content: `${emojis.SUCCESS} Ticket panel sent!`, ephemeral: true });
         return;
       }
 
@@ -373,7 +389,7 @@ export default {
       if (interaction.customId === 'welcome_channel_select') {
         const channelId = interaction.values[0];
         setGuildConfig(interaction.guildId, 'welcome_channel', channelId);
-        await interaction.reply({ content: `✅ Welcome channel set to <#${channelId}>!`, ephemeral: true });
+        await interaction.reply({ content: `${emojis.SUCCESS} Welcome channel set to <#${channelId}>!`, ephemeral: true });
         return;
       }
 
@@ -419,7 +435,7 @@ export default {
         const newPrefix = interaction.fields.getTextInputValue('prefix_input');
         const { setGuildConfig } = await import('../utils/database.js');
         setGuildConfig(interaction.guildId, 'prefix', newPrefix);
-        await interaction.reply({ content: `✅ Server prefix updated to: \`${newPrefix}\``, ephemeral: true });
+        await interaction.reply({ content: `${emojis.SUCCESS} Server prefix updated to: \`${newPrefix}\``, ephemeral: true });
         return;
       }
       if (interaction.customId === 'welcome_message_modal') {

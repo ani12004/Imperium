@@ -1,4 +1,5 @@
 import { PermissionsBitField, EmbedBuilder } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "lock",
@@ -12,7 +13,7 @@ export default {
 
         const embed = new EmbedBuilder()
             .setColor("#FFB6C1")
-            .setTitle("🔒 Channel Locked")
+            .setTitle(`${emojis.LOCK} Channel Locked`)
             .setDescription("This channel has been locked by a moderator.");
 
         message.channel.send({ embeds: [embed] });

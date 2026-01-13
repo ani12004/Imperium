@@ -1,5 +1,6 @@
 import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
 import { getGuildConfig } from "../../utils/database.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
   name: "help",
@@ -51,19 +52,19 @@ export default {
 };
 
 function getCategoryEmoji(category) {
-  const emojis = {
-    Moderation: "<:moderator:123456789>", // Placeholder or use standard if ID unknown
-    Utility: "🛠️",
-    Economy: "💳",
-    Leveling: "📊",
-    Fun: "🎮",
-    Image: "🖼️",
-    Giveaway: "🎉",
-    Tickets: "📩",
-    Admin: "🔒",
-    Info: "ℹ️"
+  const map = {
+    Moderation: emojis.SHIELD,
+    Utility: emojis.LOADING,
+    Economy: emojis.COIN,
+    Leveling: emojis.TROPHY, // or STAR
+    Fun: emojis.DICE,
+    Image: emojis.PICTURE || "🖼️", // Don't have PICTURE in emojis.js, falling back or using STAR
+    Giveaway: emojis.TROPHY,
+    Tickets: emojis.TICKET,
+    Admin: emojis.LOCK,
+    Info: emojis.INFO || "ℹ️"
   };
-  return emojis[category] || "🔹";
+  return map[category] || emojis.STAR;
 }
 // Note: User asked for "Source inspiration from emoji.gg style emojis". 
 // Since I don't have custom emoji IDs for this server, I'll stick to high-quality standard or generic "Blue" emojis where possible.

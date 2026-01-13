@@ -1,4 +1,5 @@
 import { EmbedBuilder } from "discord.js";
+import emojis from "../../utils/emojis.js";
 
 export default {
     name: "google",
@@ -7,7 +8,7 @@ export default {
     aliases: ["search"],
     async execute(message, args) {
         const query = args.join(" ");
-        if (!query) return message.reply("❌ Provide a search query.");
+        if (!query) return message.reply(`${emojis.ERROR} Provide a search query.`);
 
         const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
 
