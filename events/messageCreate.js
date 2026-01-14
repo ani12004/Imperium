@@ -19,6 +19,20 @@ export default {
 
             const userId = message.author.id;
             const guildId = message.guild.id;
+
+            // --- BUMP REMINDER ---
+            if (message.interaction?.commandName === 'bump' && message.author.id === '302050872383242240') { // Disboard ID
+                const config = await getGuildConfig(guildId);
+                if (config.bumpreminder_channel) {
+                    message.channel.send("Bump detected! Timer set for 2 hours.");
+                    setTimeout(() => {
+                        const ch = message.guild.channels.cache.get(config.bumpreminder_channel);
+                        if (ch) ch.send(config.bumpreminder_message || "Time to bump again! Use </bump:0>");
+                    }, 2 * 60 * 60 * 1000); // 2 hours
+                }
+            }
+            // ---------------------
+
             // --- STICKY MESSAGES ---
             const stickyData = client.stickyMessages.get(message.channel.id);
             if (stickyData) {
