@@ -24,7 +24,7 @@ export default {
           new StringSelectMenuOptionBuilder()
             .setLabel(cat)
             .setValue(cat)
-            .setEmoji(getCategoryEmoji(cat))
+            .setEmoji(parseEmoji(getCategoryEmoji(cat)))
             .setDescription(`View ${categories.get(cat).length} commands`)
         )
       );
@@ -126,4 +126,10 @@ function getCategoryEmoji(category) {
   if (cat.includes("levels")) return emojis.TROPHY || "📈";
 
   return emojis.STAR || "✨";
+}
+
+function parseEmoji(emoji) {
+  if (!emoji) return null;
+  const custom = emoji.match(/<a?:.+:(\d+)>/);
+  return custom ? custom[1] : emoji;
 }

@@ -13,6 +13,8 @@ export default {
         try {
             if (message.author.bot) return;
 
+            const now = Date.now();
+
             if (!message.guild) return;
 
             const userId = message.author.id;
