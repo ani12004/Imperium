@@ -35,9 +35,15 @@ const client = new Client({
     GatewayIntentBits.GuildMembers,
     GatewayIntentBits.GuildPresences,
     GatewayIntentBits.DirectMessages,
-    GatewayIntentBits.GuildVoiceStates, // ADDED: Required for VoiceMaster
+    GatewayIntentBits.GuildVoiceStates,
+    GatewayIntentBits.GuildMessageReactions, // ADDED: Required for Starboard/Clownboard
   ],
-  partials: [Partials.Channel],
+  partials: [
+    Partials.Channel,
+    Partials.Message,  // ADDED
+    Partials.Reaction, // ADDED
+    Partials.User      // ADDED
+  ],
 });
 
 // Import DisTube
