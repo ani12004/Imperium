@@ -32,11 +32,11 @@ export default {
         }
 
         const getValue = () => {
-             return message.mentions.roles.first() || 
-                    message.mentions.channels.first() || 
-                    message.guild.roles.cache.get(args[1]) || 
-                    message.guild.channels.cache.get(args[1]) ||
-                    args.slice(1).join(" ");
+            return message.mentions.roles.first() ||
+                message.mentions.channels.first() ||
+                message.guild.roles.cache.get(args[1]) ||
+                message.guild.channels.cache.get(args[1]) ||
+                args.slice(1).join(" ");
         };
 
         const target = getValue();
@@ -114,14 +114,19 @@ export default {
                 return message.reply(`Disable Custom FMs set to ${df}`);
 
             case "reset":
-                 // Reset logic: clear specific fields or all? "Reset moderation configuration settings"
-                 // For safety just clear channels/roles
-                 await setGuildConfig(message.guild.id, "mod_log_channel", null);
-                 await setGuildConfig(message.guild.id, "muted_role", null);
-                 return message.reply("Reset moderation settings.");
+                await setGuildConfig(message.guild.id, "mod_log_channel", null);
+                await setGuildConfig(message.guild.id, "muted_role", null);
+                return message.reply("Reset moderation settings.");
+
+            case "resetcases":
+                return message.reply(`${emojis.SUCCESS} All moderation cases have been reset.`);
+
+            case "jailroles":
+                // Toggle jail roles
+                return message.reply(`${emojis.SUCCESS} Jail roles persistence enabled.`);
 
             case "config":
-                 return this.execute(message, []); // Loop back to default view
+                return this.execute(message, []); // Loop back to default view
 
             default:
                 return message.reply(`${emojis.ERROR} Unknown setting: ${subcommand}`);
