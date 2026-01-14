@@ -17,7 +17,25 @@ export default {
 
             const userId = message.author.id;
             const guildId = message.guild.id;
-            const now = Date.now();
+            // --- STICKY MESSAGES ---
+            const stickyData = client.stickyMessages.get(message.channel.id);
+            if (stickyData) {
+                // Delete old one if exists
+                if (stickyData.lastId) {
+                    message.channel.messages.delete(stickyData.lastId).catch(() => { });
+                }
+
+                // Send new one
+                const embed = new EmbedBuilder()
+                    .setDescription(stickyData.text)
+                    .setColor("#2b2d31")
+                    .setFooter({ text: "Sticky Message" });
+
+                const sentMsg = await message.channel.send({ embeds: [embed] });
+                stickyData.lastId = sentMsg.id;
+                client.stickyMessages.set(message.channel.id, stickyData);
+            }
+            // -----------------------
 
             // --- AUTO MODERATION ---
             // 1. Bad Words Filter
