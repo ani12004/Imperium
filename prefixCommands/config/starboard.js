@@ -63,7 +63,10 @@ export default {
             case "config":
                 const embed = new EmbedBuilder()
                     .setTitle("⭐ Starboard Settings")
-                    .setDescription("Channel: Not Set\nEmoji: ⭐\nThreshold: 3\nEnabled: False")
+                    .setDescription(`Channel: ${config.starboard_channel ? `<#${config.starboard_channel}>` : "Not Set"}
+Emoji: ${config.starboard_emoji || emojis.STAR}
+Threshold: ${config.starboard_threshold || 3}
+Enabled: ${config.starboard_enabled ? "True" : "False"}`)
                     .setColor("#FFD700");
                 return message.channel.send({ embeds: [embed] });
 
