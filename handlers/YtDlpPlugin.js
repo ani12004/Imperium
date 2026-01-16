@@ -44,6 +44,9 @@ export class YtDlpPlugin extends PlayableExtractorPlugin {
             flags.cookies = this.cookies;
         }
 
+        // ADDED: User Agent to bypass simple bot checks
+        flags.userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
         const args = [url, ...dargs(flags, { useEquals: false })].filter(Boolean);
 
         return new Promise((resolve, reject) => {
