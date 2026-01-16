@@ -380,6 +380,68 @@ export default {
             return interaction.reply({ content: "⚠️ Please use the command for this: `.vm permit @user` or `.vm reject @user`", ephemeral: true });
         }
       }
+
+      // --- Music Buttons ---
+      if (customId.startsWith('music_')) {
+        const queue = client.distube.getQueue(interaction.guildId);
+        if (!queue) return interaction.reply({ content: "❌ No music playing.", ephemeral: true });
+
+        const memberChannelId = interaction.member.voice.channelId;
+        const botChannelId = interaction.guild.members.me.voice.channelId;
+
+        if (!memberChannelId || memberChannelId !== botChannelId) {
+          return interaction.reply({ content: "❌ You must be in the same voice channel as me to use these buttons.", ephemeral: true });
+        }
+
+        try {
+          switch (customId) {
+            case 'music_pause':
+              if (queue.paused) {
+                queue.resume();
+                await interaction.reply({ content: "▶️ Resumed.", ephemeral: true });
+              } else {
+                queue.pause();
+                await interaction.reply({ content: "⏸️ Paused.", ephemeral: true });
+              }
+              break;
+
+            case 'music_stop':
+              queue.stop();
+              await interaction.reply({ content: "⏹️ Stopped playback.", ephemeral: true });
+              break;
+
+            case 'music_skip':
+              if (queue.songs.length > 1) {
+                await queue.skip();
+                await interaction.reply({ content: "⏭️ Skipped.", ephemeral: true });
+              } else {
+                queue.stop();
+                await interaction.reply({ content: "⏹️ Stopped (no more songs).", ephemeral: true });
+              }
+              break;
+
+            case 'music_prev':
+              if (queue.previousSongs.length > 0) {
+                await queue.previous();
+                await interaction.reply({ content: "⏮️ Playing previous song.", ephemeral: true });
+              } else {
+                await interaction.reply({ content: "❌ No previous song found.", ephemeral: true });
+              }
+              break;
+
+            case 'music_loop':
+              const mode = (queue.repeatMode + 1) % 3; // 0: Off, 1: Song, 2: Queue
+              queue.setRepeatMode(mode);
+              const modeStr = mode === 1 ? "🔂 Loop Song" : mode === 2 ? "🔁 Loop Queue" : "➡️ Loop Off";
+              await interaction.reply({ content: `Set loop mode to: **${modeStr}**`, ephemeral: true });
+              break;
+          }
+        } catch (error) {
+          console.error("Music button error:", error);
+          await interaction.reply({ content: `❌ Error: ${error.message}`, ephemeral: true });
+        }
+        return;
+      }
     }
 
     // Handle Channel Selects

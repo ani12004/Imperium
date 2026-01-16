@@ -1,4 +1,4 @@
-import { EmbedBuilder } from "discord.js";
+import { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
 import emojis from "../utils/emojis.js";
 import logger from "../utils/logger.js";
 
@@ -10,7 +10,16 @@ export function loadDistubeEvents(client) {
                 .setDescription(`${emojis.SUCCESS || "🎶"} | Playing **[${song.name}](${song.url})** - \`${song.formattedDuration}\`\nRequested by: ${song.user}`)
                 .setThumbnail(song.thumbnail);
 
-            queue.textChannel.send({ embeds: [embed] }).catch(err => logger.error(`Distube Error: ${err}`));
+            const row = new ActionRowBuilder()
+                .addComponents(
+                    new ButtonBuilder().setCustomId('music_prev').setEmoji('⏮️').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('music_pause').setEmoji('⏯️').setStyle(ButtonStyle.Primary),
+                    new ButtonBuilder().setCustomId('music_stop').setEmoji('⏹️').setStyle(ButtonStyle.Danger),
+                    new ButtonBuilder().setCustomId('music_skip').setEmoji('⏭️').setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder().setCustomId('music_loop').setEmoji('🔁').setStyle(ButtonStyle.Secondary)
+                );
+
+            queue.textChannel.send({ embeds: [embed], components: [row] }).catch(err => logger.error(`Distube Error: ${err}`));
         })
         .on("addSong", (queue, song) => {
             const embed = new EmbedBuilder()
