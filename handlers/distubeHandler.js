@@ -8,7 +8,11 @@ export function loadDistubeEvents(client) {
             const embed = new EmbedBuilder()
                 .setColor("#00ff00")
                 .setDescription(`${emojis.SUCCESS || "🎶"} | Playing **[${song.name}](${song.url})** - \`${song.formattedDuration}\`\nRequested by: ${song.user}`)
-                .setThumbnail(song.thumbnail);
+                .setThumbnail(song.thumbnail)
+                .addFields({
+                    name: '⚠️ Beta Testing',
+                    value: 'Music playback is currently **unstable** and under testing. A stable version will be available soon.\n[Report Issues / Support](https://discord.com/channels/1445390291950501941/1445399944759349329/1461630863010824262)'
+                });
 
             const row = new ActionRowBuilder()
                 .addComponents(
