@@ -36,13 +36,15 @@ export function loadDistubeEvents(client) {
 
             queue.textChannel.send({ embeds: [embed] }).catch(err => logger.error(`Distube Error: ${err}`));
         })
-        .on("error", (channel, e) => {
-            logger.error(`Distube Error: ${e}`);
-            if (channel) {
+        .on("error", (error, queue) => {
+            logger.error(`Distube Error: ${error}`);
+            if (queue && queue.textChannel) {
                 const embed = new EmbedBuilder()
                     .setColor("#ff0000")
-                    .setDescription(`${emojis.ERROR || "❌"} | An error encountered: ${e.toString().slice(0, 1974)}`);
-                channel.send({ embeds: [embed] }).catch(err => logger.error(`Distube Send Error: ${err}`));
+                    .setDescription(`${emojis.ERROR || "❌"} | An error encountered: ${error.toString().slice(0, 1974)}`);
+                queue.textChannel.send({ embeds: [embed] }).catch(err => logger.error(`Distube Send Error: ${err}`));
+            } else {
+                logger.error(`Distube Error (No Queue): ${error}`);
             }
         })
         .on("empty", (queue) => {
