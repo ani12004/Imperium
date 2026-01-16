@@ -107,10 +107,10 @@ export class YtDlpPlugin extends PlayableExtractorPlugin {
             dumpSingleJson: true,
             noWarnings: true,
             // noCallHome: true, // REMOVED DEPRECATED FLAG
-            preferFreeFormats: true,
+            // preferFreeFormats: true, // REMOVED: Often causes incomplete playback with opus/webm
             skipDownload: true,
             simulate: true,
-            format: "ba/ba*"
+            format: "bestaudio/best" // Changed from ba/ba* to potentially more stable format
         }).catch((e) => {
             throw new DisTubeError("YTDLP_ERROR", `${e.stderr || e}`);
         });
