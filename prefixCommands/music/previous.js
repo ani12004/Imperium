@@ -2,19 +2,19 @@
 import emojis from "../../utils/emojis.js";
 
 export default {
-    name: "skip",
-    description: "Skip to the next track",
+    name: "previous",
+    description: "Play the previous track",
     permissions: [],
-    aliases: ["s", "next"],
+    aliases: ["prev", "back"],
     async execute(message, args, client) {
         const queue = client.distube.getQueue(message);
         if (!queue) return message.reply(`${emojis.ERROR} Nothing is playing.`);
 
         try {
-            await queue.skip();
-            message.react('⏭️');
+            await queue.previous();
+            message.react(emojis.MUSIC_PREV || '⏮️');
         } catch (e) {
-            message.reply(`${emojis.ERROR} ${e.message}`);
+            message.reply(`${emojis.ERROR} No previous song found/available.`);
         }
     }
 };

@@ -50,14 +50,25 @@ const client = new Client({
 import { DisTube } from 'distube';
 import { SoundCloudPlugin } from '@distube/soundcloud';
 import { YtDlpPlugin } from '@distube/yt-dlp';
+import { SpotifyPlugin } from '@distube/spotify';
 
 // Init DisTube
 client.distube = new DisTube(client, {
   plugins: [
     new SoundCloudPlugin(),
-    new YtDlpPlugin()
-  ]
+    new YtDlpPlugin(),
+    new SpotifyPlugin()
+  ],
+  emitNewSongOnly: true,
+  leaveOnEmpty: true,
+  leaveOnFinish: true,
+  leaveOnStop: true,
+  savePreviousSongs: true
 });
+
+// Load DisTube Events
+import { loadDistubeEvents } from './handlers/distubeHandler.js';
+loadDistubeEvents(client);
 
 // Collections
 client.prefixCommands = new Collection();
