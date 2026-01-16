@@ -72,8 +72,8 @@ const cookies = fs.existsSync(cookiesPath) ? cookiesPath : undefined;
 client.distube = new DisTube(client, {
   plugins: [
     new SoundCloudPlugin(),
-    new YtDlpPlugin({ cookies }),
-    new SpotifyPlugin()
+    new SpotifyPlugin(),
+    new YtDlpPlugin({ cookies })
   ],
   emitNewSongOnly: true,
 
