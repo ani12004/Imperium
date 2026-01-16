@@ -68,11 +68,22 @@ if (process.env.YOUTUBE_COOKIES) {
 const cookiesPath = './cookies.txt';
 const cookies = fs.existsSync(cookiesPath) ? cookiesPath : undefined;
 
+// Spotify API credentials
+const spotifyOptions = {
+  api: {
+    clientId: process.env.SPOTIFY_CLIENT_ID,
+    clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+  },
+};
+if (!process.env.SPOTIFY_CLIENT_ID || !process.env.SPOTIFY_CLIENT_SECRET) {
+  console.warn("Spotify API credentials missing. Falling back to scraping (unstable).");
+}
+
 // Init DisTube
 client.distube = new DisTube(client, {
   plugins: [
     new SoundCloudPlugin(),
-    new SpotifyPlugin(),
+    new SpotifyPlugin(spotifyOptions),
     new YtDlpPlugin({ cookies })
   ],
   emitNewSongOnly: true,
