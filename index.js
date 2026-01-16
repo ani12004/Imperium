@@ -49,8 +49,8 @@ const client = new Client({
 // Import DisTube
 import { DisTube } from 'distube';
 import { SoundCloudPlugin } from '@distube/soundcloud';
-// import { YtDlpPlugin } from '@distube/yt-dlp'; // Replaced by custom handler
-import { YtDlpPlugin } from './handlers/YtDlpPlugin.js';
+import { YtDlpPlugin } from '@distube/yt-dlp'; // Re-enabled official plugin
+// import { YtDlpPlugin } from './handlers/YtDlpPlugin.js'; // REMOVED custom handler
 import { SpotifyPlugin } from '@distube/spotify';
 import ffmpeg from 'ffmpeg-static'; // ADDED: Explicit ffmpeg path
 
@@ -67,6 +67,7 @@ if (process.env.YOUTUBE_COOKIES) {
 }
 
 const cookiesPath = './cookies.txt';
+// yt-dlp expects the path to the cookies file
 const cookies = fs.existsSync(cookiesPath) ? cookiesPath : undefined;
 
 const spotifyOptions = {};
@@ -84,10 +85,13 @@ client.distube = new DisTube(client, {
   plugins: [
     new SoundCloudPlugin(),
     new SpotifyPlugin(spotifyOptions),
-    new YtDlpPlugin({ cookies })
+    new YtDlpPlugin({
+      cookies: cookies,
+      // Pass User-Agent to permit playback on restricted videos
+      // The official plugin passes these options to dargs -> yt-dlp
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    })
   ],
-  emitNewSongOnly: true,
-
   emitNewSongOnly: true,
 
   savePreviousSongs: true,
