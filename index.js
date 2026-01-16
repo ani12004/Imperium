@@ -55,6 +55,16 @@ import { SpotifyPlugin } from '@distube/spotify';
 
 // Check for cookies file (optional, for YouTube Sign-in fix)
 import fs from 'fs';
+// Check if YOUTUBE_COOKIES env var exists and write it to a file
+if (process.env.YOUTUBE_COOKIES) {
+  try {
+    fs.writeFileSync('cookies.txt', process.env.YOUTUBE_COOKIES);
+    logger.info('Created cookies.txt from environment variable.');
+  } catch (err) {
+    logger.error('Failed to create cookies.txt from env var: ' + err);
+  }
+}
+
 const cookiesPath = './cookies.txt';
 const cookies = fs.existsSync(cookiesPath) ? cookiesPath : undefined;
 
