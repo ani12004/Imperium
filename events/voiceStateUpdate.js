@@ -40,7 +40,10 @@ export default {
                 try {
                     await oldState.channel.delete();
                 } catch (e) {
-                    console.error("Failed to delete temp voice channel:", e);
+                    // Ignore Unknown Channel error (already deleted)
+                    if (e.code !== 10003) {
+                        console.error("Failed to delete temp voice channel:", e);
+                    }
                 }
             }
         }
