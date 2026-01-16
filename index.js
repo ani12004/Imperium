@@ -77,11 +77,7 @@ client.distube = new DisTube(client, {
   ],
   emitNewSongOnly: true,
 
-  savePreviousSongs: true,
-  ytdlOptions: {
-    highWaterMark: 1 << 25, // Increase buffer size to prevent cutting off
-    quality: 'highestaudio'
-  }
+  savePreviousSongs: true
 });
 
 // Load DisTube Events
