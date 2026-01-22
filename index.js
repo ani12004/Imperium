@@ -48,10 +48,10 @@ const client = new Client({
 
 // Import DisTube
 import { DisTube } from 'distube';
-import { SoundCloudPlugin } from '@distube/soundcloud';
-// import { YtDlpPlugin } from '@distube/yt-dlp'; // Re-enabled official plugin
-import { YtDlpPlugin } from './handlers/YtDlpPlugin.js'; // REMOVED custom handler
-import { SpotifyPlugin } from '@distube/spotify';
+// import { SoundCloudPlugin } from '@distube/soundcloud';
+// import { YtDlpPlugin } from './handlers/YtDlpPlugin.js'; 
+// import { SpotifyPlugin } from '@distube/spotify';
+import { StreamType } from 'distube'; // Optional, but keeping DisTube import clean
 import ffmpeg from 'ffmpeg-static'; // ADDED: Explicit ffmpeg path
 
 // Check for cookies file (optional, for YouTube Sign-in fix)
@@ -81,16 +81,13 @@ if (process.env.SPOTIFY_CLIENT_ID && process.env.SPOTIFY_CLIENT_SECRET) {
 }
 
 // Init DisTube
+// Init DisTube
 client.distube = new DisTube(client, {
   plugins: [
-    new SoundCloudPlugin(),
-    new SpotifyPlugin(spotifyOptions),
-    new YtDlpPlugin({
-      cookies: cookies,
-      // Pass User-Agent to permit playback on restricted videos
-      // The official plugin passes these options to dargs -> yt-dlp
-      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    })
+    // Plugins removed for JioSaavn migration
+    // new SoundCloudPlugin(),
+    // new SpotifyPlugin(spotifyOptions),
+    // new YtDlpPlugin(...)
   ],
   emitNewSongOnly: true,
 
